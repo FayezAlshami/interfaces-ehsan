@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Charity Payment Screen</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans+Arabic:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "primary-content": "#0d1b12",
+                        "background-light": "#f8fcf9",
+                        "background-dark": "#102216",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1c2e24",
+                        "border-light": "#cfe7d7",
+                        "border-dark": "#2a4034",
+                        "text-main": "#0d1b12",
+                        "text-sub": "#4c9a66",
+                        "error-bg": "#fee2e2",
+                        "error-text": "#991b1b",
+                        "warning-bg": "#fef3c7",
+                        "warning-text": "#92400e",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Noto Sans Arabic", "sans-serif"],
+                        "body": ["Noto Sans Arabic", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>input[type="radio"]:checked + div {
+            border-color: #13ec5b;
+            background-color: rgba(19, 236, 91, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-body text-text-main dark:text-white antialiased transition-colors duration-200">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-xl bg-background-light dark:bg-background-dark">
+<header class="flex items-center px-4 py-3 pb-2 justify-between sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm">
+<button class="text-text-main dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_forward</span>
+</button>
+<h2 class="text-text-main dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pl-10">صفحة الدفع</h2>
+</header>
+<main class="flex-1 flex flex-col gap-6 p-4">
+<section>
+<div class="flex flex-col gap-4 rounded-2xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-border-light dark:border-border-dark">
+<div class="flex items-stretch justify-between gap-4">
+<div class="flex flex-col justify-center gap-2 flex-[2_2_0px]">
+<div>
+<p class="text-text-sub dark:text-gray-400 text-xs font-medium mb-1">مبلغ التبرع</p>
+<p class="text-text-main dark:text-white text-2xl font-bold leading-tight tracking-tight">5,000 <span class="text-sm font-medium text-text-sub">ل.س</span></p>
+</div>
+<div class="h-px bg-border-light dark:bg-border-dark w-full my-1"></div>
+<div>
+<p class="text-text-sub dark:text-gray-400 text-xs font-medium">نوع التبرع</p>
+<p class="text-text-main dark:text-white text-base font-bold mt-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">volunteer_activism</span>
+                                    صدقة جارية
+                                </p>
+</div>
+</div>
+<div class="w-1/3 min-w-[100px] bg-center bg-no-repeat bg-cover rounded-xl shadow-inner" data-alt="Hands holding a heart shape representing charity" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHY_KLNgkYKi8x5xgWdjAjB-Oi9QUqYNOU2mceKacXg0OC6erfda3blzR_tan3smwYfGrH9PtXAmYo38IEHJnmK036ufuBodt5b_UCDM9Sc0BH8TrxnAPoiVnZ6ga7vOcd8CaLGzAhd0Q-BlUC9cuE-24wh8zc2irzYEO4VbRGESJ0sFviErFrdzfYbM5iLM4SDNRcNtZB-PzGrJEkHol_tCTzyN9SfS-HHwMqLWClVOzAp03X_g6cCZKD4QpMmL8Cv4Ffgza6LYY");'>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-text-main dark:text-white text-lg font-bold leading-tight px-1 pb-3 pt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">payments</span>
+                    طريقة الدفع
+                </h2>
+<div class="flex flex-col gap-3" role="radiogroup">
+<label class="relative cursor-pointer group">
+<input checked="" class="peer sr-only" name="payment-method" type="radio"/>
+<div class="flex items-center gap-4 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-4 transition-all hover:border-primary peer-focus:ring-2 peer-focus:ring-primary/50">
+<div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-border-light peer-checked:border-primary group-hover:border-primary transition-colors">
+<div class="h-3 w-3 rounded-full bg-primary opacity-0 peer-checked:opacity-100 transition-opacity transform scale-0 peer-checked:scale-100 transition-transform duration-200"></div>
+</div>
+<div class="size-10 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 shrink-0">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<div class="flex grow flex-col">
+<p class="text-text-main dark:text-white text-base font-bold leading-normal">شام كاش</p>
+<p class="text-text-sub dark:text-gray-400 text-xs font-normal leading-normal">الدفع الإلكتروني المباشر</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 peer-checked:opacity-100 transition-opacity absolute top-4 left-4">check_circle</span>
+</div>
+</label>
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="payment-method" type="radio"/>
+<div class="flex items-center gap-4 rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-4 transition-all hover:border-primary peer-focus:ring-2 peer-focus:ring-primary/50">
+<div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-border-light peer-checked:border-primary group-hover:border-primary transition-colors">
+<div class="h-3 w-3 rounded-full bg-primary opacity-0 peer-checked:opacity-100 transition-opacity transform scale-0 peer-checked:scale-100 transition-transform duration-200"></div>
+</div>
+<div class="size-10 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center text-gray-500 shrink-0">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+</div>
+<div class="flex grow flex-col">
+<p class="text-text-main dark:text-white text-base font-bold leading-normal">سيريتل كاش</p>
+<p class="text-text-sub dark:text-gray-400 text-xs font-normal leading-normal">عبر تطبيق أقرب إليك</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 peer-checked:opacity-100 transition-opacity absolute top-4 left-4">check_circle</span>
+</div>
+</label>
+</div>
+</section>
+</main>
+<div class="p-4 bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark sticky bottom-0 z-40">
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center px-1">
+<span class="text-sm font-medium text-text-main dark:text-white">الإجمالي للدفع:</span>
+<span class="text-lg font-bold text-primary">5,000 ل.س</span>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 bg-primary hover:bg-green-400 active:scale-[0.98] transition-all shadow-lg shadow-green-500/20 text-primary-content text-lg font-bold leading-normal tracking-wide">
+<span class="mr-2">تأكيد الدفع</span>
+<span class="material-symbols-outlined text-xl">lock</span>
+</button>
+<div class="flex justify-center items-center gap-1 opacity-60 mt-1">
+<span class="material-symbols-outlined text-[16px] text-text-sub">security</span>
+<span class="text-[10px] text-text-sub font-medium">عملية دفع آمنة ومشفرة 100%</span>
+</div>
+</div>
+</div>
+<script>
+        // Simple script to toggle active states if visual logic gets complex
+        // Currently handled by Tailwind's peer-checked classes
+    </script>
+</div></body></html>

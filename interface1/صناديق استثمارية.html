@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>حاسبة الزكاة: صناديق استثمارية</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+Arabic:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13ec5b",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+              "surface-dark": "#1c271f",
+              "border-dark": "#3b5443",
+            },
+            fontFamily: {
+              display: ["Noto Sans Arabic", "Inter", "sans-serif"],
+              sans: ["Noto Sans Arabic", "Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              "2xl": "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-white font-display antialiased selection:bg-primary selection:text-black"
+  >
+    <div
+      class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24"
+    >
+      <header
+        class="sticky top-0 z-50 flex items-center justify-between bg-background-light/95 dark:bg-background-dark/95 px-4 py-4 backdrop-blur-md"
+      >
+        <button
+          class="flex h-10 w-10 items-center justify-center rounded-full text-gray-900 transition hover:bg-black/5 dark:text-white dark:hover:bg-white/10"
+        >
+          <span class="material-symbols-outlined text-[24px]"
+            >arrow_forward</span
+          >
+        </button>
+        <h1
+          class="flex-1 text-center text-lg font-bold leading-tight tracking-tight"
+        >
+          حاسبة الزكاة
+        </h1>
+        <div class="w-10"></div>
+      </header>
+      <div class="px-4 py-4">
+        <h2
+          class="text-center text-[28px] font-bold leading-tight tracking-tight text-gray-900 dark:text-white"
+        >
+          زكاة الصناديق الاستثمارية
+        </h2>
+        <p class="mt-2 text-center text-sm text-gray-500 dark:text-gray-400">
+          احسب زكاة وحداتك في الصناديق الاستثمارية بناءً على قيمتها السوقية
+          الحالية.
+        </p>
+      </div>
+      <div class="mb-6 flex w-full overflow-x-auto px-4 pb-2 no-scrollbar">
+        <div class="flex gap-3">
+          <button
+            class="flex h-10 min-w-[80px] shrink-0 items-center justify-center gap-x-2 rounded-full border border-gray-200 bg-white px-5 dark:border-border-dark dark:bg-surface-dark transition hover:bg-gray-50 dark:hover:bg-[#253329]"
+          >
+            <p
+              class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300"
+            >
+              نقد
+            </p>
+          </button>
+          <button
+            class="flex h-10 min-w-[80px] shrink-0 items-center justify-center gap-x-2 rounded-full border border-gray-200 bg-white px-5 dark:border-border-dark dark:bg-surface-dark transition hover:bg-gray-50 dark:hover:bg-[#253329]"
+          >
+            <p
+              class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300"
+            >
+              ذهب
+            </p>
+          </button>
+          <button
+            class="flex h-10 min-w-[80px] shrink-0 items-center justify-center gap-x-2 rounded-full border border-gray-200 bg-white px-5 dark:border-border-dark dark:bg-surface-dark transition hover:bg-gray-50 dark:hover:bg-[#253329]"
+          >
+            <p
+              class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300"
+            >
+              فضة
+            </p>
+          </button>
+          <button
+            class="flex h-10 min-w-[80px] shrink-0 items-center justify-center gap-x-2 rounded-full border border-gray-200 bg-white px-5 dark:border-border-dark dark:bg-surface-dark transition hover:bg-gray-50 dark:hover:bg-[#253329]"
+          >
+            <p
+              class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300"
+            >
+              أسهم
+            </p>
+          </button>
+          <button
+            class="flex h-10 min-w-[80px] shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 transition hover:brightness-110"
+          >
+            <span
+              class="material-symbols-outlined text-sm font-bold text-background-dark"
+              >monitoring</span
+            >
+            <p class="text-sm font-bold leading-normal text-background-dark">
+              صناديق
+            </p>
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-col gap-5 px-4">
+        <div class="flex p-1 bg-gray-100 dark:bg-surface-dark rounded-xl">
+          <button
+            class="flex-1 py-2 text-center text-sm font-bold rounded-lg bg-white dark:bg-[#253329] text-gray-900 dark:text-white shadow-sm transition-all"
+          >
+            حساب بالوحدات
+          </button>
+          <button
+            class="flex-1 py-2 text-center text-sm font-medium rounded-lg text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-all"
+          >
+            القيمة الإجمالية
+          </button>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <label class="group flex flex-col">
+            <span
+              class="mb-2 text-sm font-medium leading-normal text-gray-900 dark:text-gray-200"
+              >عدد الوحدات</span
+            >
+            <div class="relative">
+              <input
+                class="h-14 w-full rounded-xl border border-gray-200 bg-white pr-3 pl-3 text-center text-base text-gray-900 placeholder-gray-400 focus:border-primary focus:ring-0 dark:border-border-dark dark:bg-surface-dark dark:text-white dark:placeholder-[#9db9a6]"
+                placeholder="0"
+                type="number"
+                value="1000"
+              />
+            </div>
+          </label>
+          <label class="group flex flex-col">
+            <span
+              class="mb-2 text-sm font-medium leading-normal text-gray-900 dark:text-gray-200"
+              >سعر الوحدة</span
+            >
+            <div class="relative">
+              <input
+                class="h-14 w-full rounded-xl border border-gray-200 bg-white pr-3 text-right text-base text-gray-900 placeholder-gray-400 focus:border-primary focus:ring-0 dark:border-border-dark dark:bg-surface-dark dark:text-white dark:placeholder-[#9db9a6]"
+                dir="rtl"
+                placeholder="0.00"
+                type="number"
+                value="2500"
+              />
+              <span
+                class="absolute inset-y-0 left-3 flex items-center text-sm font-medium text-gray-500 dark:text-gray-400"
+                >ل.س</span
+              >
+            </div>
+          </label>
+        </div>
+        <div
+          class="flex items-center justify-between rounded-lg bg-gray-50 px-4 py-3 dark:bg-surface-dark/50 border border-gray-100 dark:border-border-dark/50"
+        >
+          <span class="text-sm text-gray-600 dark:text-gray-400"
+            >القيمة السوقية الإجمالية:</span
+          >
+          <span class="font-semibold text-gray-900 dark:text-white"
+            >2,500,000 ل.س</span
+          >
+        </div>
+        <div class="my-1 h-px w-full bg-gray-100 dark:bg-border-dark"></div>
+        <div
+          class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-gray-100 dark:bg-surface-dark dark:ring-border-dark"
+        >
+          <div class="mb-4 flex items-center justify-between">
+            <div class="flex items-center gap-1">
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                المبلغ الخاضع للزكاة
+              </p>
+              <span
+                class="material-symbols-outlined text-[16px] text-gray-400"
+                title="إجمالي القيمة السوقية للوحدات"
+                >help</span
+              >
+            </div>
+            <p class="font-semibold text-gray-900 dark:text-white">
+              2,500,000 ل.س
+            </p>
+          </div>
+          <div class="mb-1 flex items-center justify-between">
+            <p class="text-base font-medium text-gray-900 dark:text-gray-200">
+              الزكاة الواجبة
+            </p>
+            <div
+              class="flex items-center gap-2 rounded-lg bg-primary/10 px-2 py-1"
+            >
+              <span class="text-xs font-bold text-primary dark:text-[#13ec5b]"
+                >2.5%</span
+              >
+            </div>
+          </div>
+          <div class="mt-2 flex items-baseline justify-end gap-1">
+            <h3
+              class="text-4xl font-bold tracking-tight text-primary dark:text-[#13ec5b]"
+            >
+              62,500
+            </h3>
+            <span class="text-lg font-medium text-gray-500 dark:text-gray-400"
+              >ل.س</span
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="fixed bottom-0 left-0 right-0 border-t border-gray-100 bg-white/80 p-4 backdrop-blur-lg dark:border-white/5 dark:bg-[#111813]/90"
+      >
+        <button
+          class="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-primary text-base font-bold text-background-dark shadow-lg shadow-primary/25 transition-transform active:scale-[0.98]"
+        >
+          <span class="material-symbols-outlined filled"
+            >volunteer_activism</span
+          >
+          تبرع بزكاتك الآن
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

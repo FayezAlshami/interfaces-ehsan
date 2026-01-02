@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>تفاصيل الفرصة</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#567c8d", // Green shade similar to screenshot
+              "primary-dark": "#2f4156",
+              "background-light": "#f5efeb", // Light gray for light mode
+              "background-dark": "#111827", // Dark blue-gray for dark mode
+              "card-light": "#ffffff",
+              "card-dark": "#1f2937",
+              "input-bg-dark": "#374151",
+              "input-bg-light": "#f9fafb",
+            },
+            fontFamily: {
+              display: ["Tajawal", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Tajawal", sans-serif;
+      }
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 min-h-screen pb-24"
+  >
+    <header
+      class="fixed top-0 w-full z-50 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 px-4 py-3 flex justify-between items-center shadow-sm"
+    >
+      <div class="flex items-center space-x-4 space-x-reverse text-primary">
+        <button class="p-1">
+          <span class="material-icons">shopping_cart</span>
+        </button>
+        <button class="p-1"><span class="material-icons">search</span></button>
+        <button class="p-1"><span class="material-icons">share</span></button>
+      </div>
+      <button class="text-gray-500 dark:text-gray-300">
+        <span class="material-icons">chevron_left</span>
+      </button>
+    </header>
+    <main class="container mx-auto max-w-md pt-16 px-4">
+      <div
+        class="bg-card-light dark:bg-card-dark rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 mb-4"
+      >
+        <div class="relative h-48 w-full">
+          <img
+            alt="Students learning with laptop"
+            class="w-full h-full object-cover"
+            src="images/تبرع.jpg"
+          />
+          <div
+            class="absolute bottom-0 right-0 bg-primary text-white text-sm font-bold px-3 py-1 rounded-tl-lg"
+          >
+            77%
+          </div>
+          <div
+            class="absolute bottom-0 w-full h-1 bg-gray-200 dark:bg-gray-600"
+          >
+            <div class="h-1 bg-primary" style="width: 77%"></div>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-center mb-3">
+            <span
+              class="bg-primary/10 text-primary text-xs font-semibold px-2 py-1 rounded-md border border-primary/20 flex items-center gap-1"
+            >
+              <span class="material-icons text-sm">qr_code</span> P61448
+            </span>
+            <span
+              class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs px-2 py-1 rounded-md"
+            >
+              المشاريع عامة
+            </span>
+          </div>
+          <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-1">
+            الأجهزة التعليمية للطلاب المتعففين
+          </h2>
+          <div
+            class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-4 cursor-pointer"
+          >
+            <p class="truncate">
+              ساهم في توفير الأجهزة التعليمية لطلاب وطالبات الأسر ال...
+            </p>
+            <span class="material-icons text-base mr-1">expand_more</span>
+          </div>
+          <div class="grid grid-cols-3 gap-3 mb-3">
+            <button
+              class="border border-gray-300 dark:border-gray-600 rounded-lg py-2 text-center text-sm font-medium hover:border-primary hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary dark:hover:border-primary"
+            >
+              100 ل.س
+            </button>
+            <button
+              class="border border-gray-300 dark:border-gray-600 rounded-lg py-2 text-center text-sm font-medium hover:border-primary hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary dark:hover:border-primary"
+            >
+              50 ل.س
+            </button>
+            <button
+              class="border border-gray-300 dark:border-gray-600 rounded-lg py-2 text-center text-sm font-medium hover:border-primary hover:text-primary transition-colors dark:text-gray-300 dark:hover:text-primary dark:hover:border-primary"
+            >
+              10 ل.س
+            </button>
+          </div>
+          <div class="relative mb-4">
+            <input
+              class="w-full bg-input-bg-light dark:bg-input-bg-dark border border-gray-300 dark:border-gray-600 rounded-lg py-3 px-4 pl-12 text-right focus:ring-primary focus:border-primary text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 text-sm"
+              placeholder="مبلغ التبرع"
+              type="number"
+            />
+            <span
+              class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-400 text-sm font-medium"
+              >ل.س</span
+            >
+          </div>
+          <div class="flex items-center mb-6">
+            <input
+              class="w-5 h-5 text-primary border-gray-300 rounded focus:ring-primary bg-gray-100 dark:bg-gray-700 dark:border-gray-600"
+              id="gift-checkbox"
+              type="checkbox"
+            />
+            <label
+              class="mr-3 text-sm text-gray-700 dark:text-gray-300 font-medium"
+              for="gift-checkbox"
+            >
+              تبرع عن أهلك أو أصدقائك وشاركهم الأجر
+            </label>
+          </div>
+          <div
+            class="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4 mb-4 border border-gray-100 dark:border-gray-700"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <div class="text-center">
+                <span
+                  class="block text-xs text-gray-500 dark:text-gray-400 mb-1"
+                  >تم جمع</span
+                >
+                <span class="font-bold text-gray-900 dark:text-white"
+                  >190,078 ل.س</span
+                >
+              </div>
+              <div class="h-8 w-px bg-gray-300 dark:bg-gray-600"></div>
+              <div class="text-center">
+                <span class="block text-xs text-primary mb-1"
+                  >المبلغ المتبقي</span
+                >
+                <span class="font-bold text-gray-900 dark:text-white"
+                  >57,922 ل.س</span
+                >
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-center text-xs text-gray-500 dark:text-gray-400 pt-2 border-t border-gray-200 dark:border-gray-700"
+            >
+              <div class="flex items-center gap-1">
+                <span class="material-icons text-sm">people_outline</span>
+                <span>124 مستفيد</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="material-icons text-sm">perm_identity</span>
+                <span>للمواطنون</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="material-icons text-sm">location_on</span>
+                <span>بيشة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center py-4 px-2">
+        <button
+          class="bg-transparent border border-gray-500 text-gray-300 text-xs px-3 py-1 rounded hover:bg-gray-800 transition-colors"
+        >
+          تفاصيل
+        </button>
+        <div class="flex items-center gap-3">
+          <div class="text-left">
+            <span class="block text-xs text-gray-500 dark:text-gray-400"
+              >الشريك المنفذ</span
+            >
+            <span class="font-bold text-sm text-gray-900 dark:text-white"
+              >الجمعية الخيرية الإسلامية</span
+            >
+          </div>
+          <div
+            class="h-12 w-12 rounded-full border-2 border-white dark:border-gray-600 bg-white dark:bg-gray-800 overflow-hidden shadow-sm flex items-center justify-center"
+          >
+            <span class="material-icons text-gray-400 dark:text-gray-500"
+              >business</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-between items-center py-4 px-2">
+        <button
+          class="bg-transparent border border-gray-500 text-gray-300 text-xs px-3 py-1 rounded hover:bg-gray-800 transition-colors"
+        >
+          تفاصيل
+        </button>
+        <div class="flex items-center gap-3">
+          <div class="text-left">
+            <span class="block text-xs text-gray-500 dark:text-gray-400"
+              >الشريك المنفذ</span
+            >
+            <span class="font-bold text-sm text-gray-900 dark:text-white"
+              >جمعية الإحسان الخيرية</span
+            >
+          </div>
+          <div
+            class="h-12 w-12 rounded-full border-2 border-white dark:border-gray-600 bg-white dark:bg-gray-800 overflow-hidden shadow-sm flex items-center justify-center"
+          >
+            <span class="material-icons text-gray-400 dark:text-gray-500"
+              >business</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-2 mb-20">
+        <div
+          class="bg-card-light dark:bg-card-dark rounded-xl p-4 border border-gray-200 dark:border-gray-700 flex justify-between items-center"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="bg-primary/10 w-8 h-8 rounded-full flex items-center justify-center"
+            >
+              <span class="material-icons text-primary text-sm"
+                >visibility</span
+              >
+            </div>
+            <span class="text-sm font-medium">الزيارات</span>
+          </div>
+          <span class="text-xs text-gray-400">1.2k</span>
+        </div>
+        <div
+          class="bg-card-light dark:bg-card-dark rounded-xl p-4 border border-gray-200 dark:border-gray-700"
+        >
+          <div class="flex justify-between items-center mb-2">
+            <div class="flex items-center gap-3">
+              <div
+                class="bg-primary/10 w-8 h-8 rounded-full flex items-center justify-center"
+              >
+                <span class="material-icons text-primary text-sm"
+                  >volunteer_activism</span
+                >
+              </div>
+              <span class="text-sm font-medium">عمليات التبرع</span>
+            </div>
+            <span class="text-xs text-gray-400">342</span>
+          </div>
+          <div
+            class="mt-2 pt-2 border-t border-gray-200 dark:border-gray-700 text-xs text-gray-500 dark:text-gray-400 space-y-2"
+          >
+            <div class="flex justify-between items-center">
+              <span>آخر عملية تبرع:</span>
+              <span class="font-medium text-gray-700 dark:text-gray-300"
+                >منذ 3 ساعات</span
+              >
+            </div>
+            <div class="flex justify-between items-center">
+              <span>المستفيدون:</span>
+              <span class="font-medium text-gray-700 dark:text-gray-300"
+                >56 من 100</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div
+      class="fixed bottom-0 w-full bg-card-light dark:bg-card-dark border-t border-gray-200 dark:border-gray-800 p-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]"
+    >
+      <div class="container mx-auto max-w-md flex gap-3">
+        <button
+          class="flex-1 bg-primary hover:bg-primary-dark text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors text-center"
+        >
+          تبرع الآن
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

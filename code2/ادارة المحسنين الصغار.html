@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إدارة المحسنين الصغار</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2F4157",
+              "background-light": "#F4EFEB",
+              "background-dark": "#2F4157",
+              "text-light": "#2F4157",
+              "text-dark": "#FFFFFF",
+              "text-muted-light": "#577C8E",
+              "text-muted-dark": "#C7D9E5",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#577C8E",
+              "border-light": "#C7D9E5",
+              "border-dark": "#577C8E",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+
+  <body class="font-display bg-background-light dark:bg-background-dark">
+    <div
+      class="relative min-h-screen w-full flex flex-col overflow-x-hidden pb-32"
+    >
+      <header
+        class="sticky top-0 z-10 flex items-center p-4 pb-2 justify-between bg-background-light/90 dark:bg-background-dark/90 backdrop-blur border-b border-border-light dark:border-border-dark"
+      >
+        <div
+          class="flex size-12 items-center justify-center text-text-light dark:text-text-dark"
+        >
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </div>
+        <h1
+          class="flex-1 text-center text-lg font-bold text-text-light dark:text-text-dark"
+        >
+          إدارة المحسنين الصغار
+        </h1>
+        <div class="w-12"></div>
+      </header>
+
+      <main class="flex-grow px-4 pt-4">
+        <div class="space-y-3">
+          <div
+            class="flex cursor-pointer items-center gap-4 rounded-xl bg-[#FFFFFF] dark:bg-neutral-800/20 p-4 min-h-[72px] justify-between shadow-sm transition-transform active:scale-[0.98]"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14"
+                data-alt="Avatar for Ahmed"
+                style="background-image: url('./image/boy_upscaled_4x.png')"
+              ></div>
+              <div class="flex flex-col justify-center">
+                <p
+                  class="text-[#2F4157] dark:text-[#F4EFEB] text-base font-medium leading-normal line-clamp-1"
+                >
+                  أحمد
+                </p>
+                <p
+                  class="text-[#577C8E] dark:text-[#577C8E] text-sm font-normal leading-normal line-clamp-2"
+                >
+                  إجمالي التبرعات: ٥٠ ل.س
+                </p>
+              </div>
+            </div>
+            <div class="shrink-0">
+              <div
+                class="text-[#2F4157] dark:text-[#F4EFEB]/70 flex size-7 items-center justify-center"
+              >
+                <span class="material-symbols-outlined">chevron_left</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex cursor-pointer items-center gap-4 rounded-xl bg-[#FFFFFF] dark:bg-neutral-800/20 p-4 min-h-[72px] justify-between shadow-sm transition-transform active:scale-[0.98]"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14"
+                data-alt="Avatar for Fatima"
+                style="background-image: url('./image/avater_2.jpg')"
+              ></div>
+              <div class="flex flex-col justify-center">
+                <p
+                  class="text-[#2F4157] dark:text-[#F4EFEB] text-base font-medium leading-normal line-clamp-1"
+                >
+                  فاطمة
+                </p>
+                <p
+                  class="text-[#577C8E] dark:text-[#577C8E] text-sm font-normal leading-normal line-clamp-2"
+                >
+                  إجمالي التبرعات: ١٢٠ ل.س
+                </p>
+              </div>
+            </div>
+            <div class="shrink-0">
+              <div
+                class="text-[#2F4157] dark:text-[#F4EFEB]/70 flex size-7 items-center justify-center"
+              >
+                <span class="material-symbols-outlined">chevron_left</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex cursor-pointer items-center gap-4 rounded-xl bg-[#FFFFFF] dark:bg-neutral-800/20 p-4 min-h-[72px] justify-between shadow-sm transition-transform active:scale-[0.98]"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14"
+                data-alt="Avatar for Yousef"
+                style="background-image: url('./image/boy2.png')"
+              ></div>
+              <div class="flex flex-col justify-center">
+                <p
+                  class="text-[#2F4157] dark:text-[#F4EFEB] text-base font-medium leading-normal line-clamp-1"
+                >
+                  يوسف
+                </p>
+                <p
+                  class="text-[#577C8E] dark:text-[#577C8E] text-sm font-normal leading-normal line-clamp-2"
+                >
+                  إجمالي التبرعات: ٧٥ ل.س
+                </p>
+              </div>
+            </div>
+            <div class="shrink-0">
+              <div
+                class="text-[#2F4157] dark:text-[#F4EFEB]/70 flex size-7 items-center justify-center"
+              >
+                <span class="material-symbols-outlined">chevron_left</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer
+        class="fixed bottom-0 left-0 right-0 p-4 bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark"
+      >
+        <button
+          class="w-full h-14 rounded-xl bg-primary text-white font-bold flex items-center justify-center gap-2"
+        >
+          <span class="material-symbols-outlined">add</span>
+          <span>إضافة محسن صغير جديد</span>
+        </button>
+      </footer>
+    </div>
+  </body>
+</html>

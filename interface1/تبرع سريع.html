@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>نافذة التبرع السريع - Quick Donate Modal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#17cf54",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112116",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #333;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-800/50 font-display">
+    <div class="relative flex h-screen w-full flex-col justify-end">
+      <!-- Bottom Sheet Container -->
+      <div
+        class="flex max-h-[90vh] w-full flex-col overflow-y-auto rounded-t-lg bg-background-light dark:bg-background-dark"
+      >
+        <!-- BottomSheetHandle -->
+        <div
+          class="sticky top-0 z-10 bg-background-light dark:bg-background-dark pb-2 pt-3"
+        >
+          <button class="flex h-5 w-full items-center justify-center">
+            <div
+              class="h-1 w-9 rounded-full bg-gray-300 dark:bg-gray-700"
+            ></div>
+          </button>
+        </div>
+        <!-- HeadlineText -->
+        <h2
+          class="text-gray-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-2"
+        >
+          تبرع سريع
+        </h2>
+        <!-- Amount Selection -->
+        <div class="px-4 py-3">
+          <p class="mb-2 text-sm text-gray-600 dark:text-gray-400">
+            اختر مبلغ التبرع
+          </p>
+          <!-- SegmentedButtons -->
+          <div
+            class="flex h-12 flex-1 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-800 p-1.5"
+          >
+            <label
+              class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-gray-900 has-[:checked]:shadow-sm has-[:checked]:text-gray-900 has-[:checked]:dark:text-white text-gray-500 dark:text-gray-400 text-base font-medium leading-normal transition-colors duration-200"
+            >
+              <span class="truncate">50 ل.س</span>
+              <input
+                class="invisible w-0"
+                name="donation_amount_preset"
+                type="radio"
+                value="50"
+              />
+            </label>
+            <label
+              class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-gray-900 has-[:checked]:shadow-sm has-[:checked]:text-gray-900 has-[:checked]:dark:text-white text-gray-500 dark:text-gray-400 text-base font-medium leading-normal transition-colors duration-200"
+            >
+              <span class="truncate">100 ل.س</span>
+              <input
+                checked=""
+                class="invisible w-0"
+                name="donation_amount_preset"
+                type="radio"
+                value="100"
+              />
+            </label>
+            <label
+              class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-white has-[:checked]:dark:bg-gray-900 has-[:checked]:shadow-sm has-[:checked]:text-gray-900 has-[:checked]:dark:text-white text-gray-500 dark:text-gray-400 text-base font-medium leading-normal transition-colors duration-200"
+            >
+              <span class="truncate">200 ل.س</span>
+              <input
+                class="invisible w-0"
+                name="donation_amount_preset"
+                type="radio"
+                value="200"
+              />
+            </label>
+          </div>
+        </div>
+        <!-- TextField for Custom Amount -->
+        <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+          <label class="flex flex-col min-w-40 flex-1">
+            <div class="flex w-full flex-1 items-stretch rounded-xl">
+              <input
+                class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-gray-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800/50 focus:border-primary/80 dark:focus:border-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-[15px] rounded-r-none border-r-0 pr-2 text-base font-normal leading-normal text-right"
+                placeholder="أو أدخل مبلغ آخر"
+                value=""
+              />
+              <div
+                class="text-gray-400 dark:text-gray-500 flex border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800/50 items-center justify-center pr-[15px] rounded-r-xl border-l-0"
+              >
+                <span>ل.س</span>
+              </div>
+            </div>
+          </label>
+        </div>
+        <!-- Category Selection -->
+        <div class="px-4 py-3">
+          <p class="mb-2 text-sm text-gray-600 dark:text-gray-400">
+            اختر فئة التبرع
+          </p>
+          <!-- RadioList -->
+          <div class="flex flex-col gap-3">
+            <label
+              class="flex cursor-pointer items-center gap-4 rounded-xl border border-solid border-gray-300 dark:border-gray-700 p-[15px] flex-row-reverse has-[:checked]:border-primary has-[:checked]:bg-primary/10 transition-colors duration-200"
+            >
+              <input
+                checked=""
+                class="form-radio h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary checked:border-primary dark:checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary"
+                name="donation_category"
+                style="
+                  --radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27%2317cf54%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');
+                "
+                type="radio"
+              />
+              <div class="flex grow flex-col">
+                <p
+                  class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal"
+                >
+                  تبرع عام
+                </p>
+              </div>
+            </label>
+            <label
+              class="flex cursor-pointer items-center gap-4 rounded-xl border border-solid border-gray-300 dark:border-gray-700 p-[15px] flex-row-reverse has-[:checked]:border-primary has-[:checked]:bg-primary/10 transition-colors duration-200"
+            >
+              <input
+                class="form-radio h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary checked:border-primary dark:checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary"
+                name="donation_category"
+                style="
+                  --radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27%2317cf54%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');
+                "
+                type="radio"
+              />
+              <div class="flex grow flex-col">
+                <p
+                  class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal"
+                >
+                  تيسرت
+                </p>
+              </div>
+            </label>
+            <label
+              class="flex cursor-pointer items-center gap-4 rounded-xl border border-solid border-gray-300 dark:border-gray-700 p-[15px] flex-row-reverse has-[:checked]:border-primary has-[:checked]:bg-primary/10 transition-colors duration-200"
+            >
+              <input
+                class="form-radio h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary checked:border-primary dark:checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary"
+                name="donation_category"
+                style="
+                  --radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27%2317cf54%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');
+                "
+                type="radio"
+              />
+              <div class="flex grow flex-col">
+                <p
+                  class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal"
+                >
+                  وقف
+                </p>
+              </div>
+            </label>
+            <label
+              class="flex cursor-pointer items-center gap-4 rounded-xl border border-solid border-gray-300 dark:border-gray-700 p-[15px] flex-row-reverse has-[:checked]:border-primary has-[:checked]:bg-primary/10 transition-colors duration-200"
+            >
+              <input
+                class="form-radio h-5 w-5 border-2 border-gray-300 dark:border-gray-600 bg-transparent text-primary checked:border-primary dark:checked:border-primary checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-primary"
+                name="donation_category"
+                style="
+                  --radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27%2317cf54%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3ccircle cx=%278%27 cy=%278%27 r=%273%27/%3e%3c/svg%3e');
+                "
+                type="radio"
+              />
+              <div class="flex grow flex-col">
+                <p
+                  class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal"
+                >
+                  مساجد
+                </p>
+              </div>
+            </label>
+          </div>
+        </div>
+        <!-- Informational Text -->
+        <div class="px-4 pt-4 pb-2 text-center">
+          <p class="text-xs text-gray-500 dark:text-gray-400">
+            يذهب هذا التبرع للحالات الأشد حاجة
+          </p>
+        </div>
+        <!-- Continue Button -->
+        <div
+          class="sticky bottom-0 z-10 bg-background-light dark:bg-background-dark p-4"
+        >
+          <button
+            class="flex h-14 w-full items-center justify-center rounded-xl bg-primary px-4 text-base font-bold text-white shadow-lg transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98]"
+          >
+            متابعة
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

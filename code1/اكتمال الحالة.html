@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إشعار اكتمال الحالة</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2F4157",
+              "background-light": "#F4EFEB",
+              "background-dark": "#2F4157",
+              "text-light": "#2F4157",
+              "text-dark": "#FFFFFF",
+              "text-muted-light": "#577C8E",
+              "text-muted-dark": "#C7D9E5",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div
+      class="relative min-h-screen w-full flex flex-col bg-background-light dark:bg-background-dark overflow-x-hidden"
+    >
+      <div class="flex items-center p-4 pb-2 justify-between">
+        <div class="flex size-12"></div>
+        <div class="flex size-12 justify-end">
+          <button
+            class="flex items-center justify-center h-12 text-text-light dark:text-text-dark"
+          >
+            <span class="material-symbols-outlined text-3xl">close</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="flex-grow flex flex-col justify-center items-center px-4">
+        <div class="flex justify-center items-center pt-8 pb-4">
+          <div class="bg-[#C7D9E5] rounded-full p-6">
+            <div
+              class="bg-primary rounded-full p-8 flex items-center justify-center"
+            >
+              <span class="material-symbols-outlined text-6xl text-white"
+                >verified</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <h1
+          class="text-text-light dark:text-text-dark text-[32px] font-bold text-center pt-6 pb-3"
+        >
+          اكتملت الحالة!
+        </h1>
+
+        <p
+          class="text-text-muted-light dark:text-text-muted-dark text-base text-center max-w-md px-4"
+        >
+          تم جمع المبلغ وإكمال الحالة، شكرًا لمساهمتك التي كانت جزءًا من هذا
+          الخير.
+        </p>
+      </div>
+
+      <div class="px-4 py-3 pb-8">
+        <button
+          class="w-full h-14 bg-primary rounded-xl text-white font-bold shadow-lg"
+        >
+          عرض سجل تبرعاتي
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>وقف إحسان</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Noto+Sans+Arabic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2F4157",
+              "background-light": "#F4EFEB",
+              "background-dark": "#2F4157",
+              "text-light": "#2F4157",
+              "text-dark": "#FFFFFF",
+              "text-muted-light": "#577C8E",
+              "text-muted-dark": "#C7D9E5",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#577C8E",
+              "border-light": "#C7D9E5",
+              "border-dark": "#577C8E",
+            },
+            fontFamily: {
+              display: ["Manrope", "Noto Sans Arabic", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative min-h-screen w-full flex flex-col overflow-x-hidden">
+      <div
+        class="flex items-center p-4 pb-2 justify-between sticky top-0 border-b border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark"
+      >
+        <div
+          class="flex size-12 items-center justify-center text-text-light dark:text-text-dark"
+        >
+          <span class="material-symbols-outlined text-3xl">arrow_forward</span>
+        </div>
+        <h2
+          class="flex-1 text-center text-lg font-bold text-text-light dark:text-text-dark"
+        >
+          وقف إحسان
+        </h2>
+        <div class="w-12"></div>
+      </div>
+
+      <main class="flex-grow pb-28">
+        <div class="px-4 py-3">
+          <div
+            class="w-full min-h-[218px] rounded-xl bg-center bg-cover"
+            style="background-image: url('image/waqf.jpg')"
+          ></div>
+        </div>
+
+        <h1
+          class="text-text-light dark:text-text-dark text-[32px] font-bold px-4 pt-4 pb-3"
+        >
+          ما هو وقف إحسان؟
+        </h1>
+
+        <p
+          class="text-text-muted-light dark:text-text-muted-dark text-base leading-relaxed px-4 pb-6"
+        >
+          الوقف هو صدقة جارية، أصلها ثابت وأجرها دائم. يساهم في بناء مستقبل
+          مستدام للأعمال الخيرية، ويمول المشاريع التي تخدم المجتمع بشكل مستمر.
+        </p>
+
+        <h3
+          class="text-lg font-bold text-text-light dark:text-text-dark px-4 pb-3"
+        >
+          مصارف الوقف الرئيسية
+        </h3>
+
+        <div class="grid gap-3 px-4">
+          <div
+            class="flex items-center gap-4 rounded-xl p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark"
+          >
+            <div
+              class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary"
+            >
+              <span class="material-symbols-outlined">child_care</span>
+            </div>
+            <p class="font-bold text-text-light dark:text-text-dark">
+              رعاية الأيتام
+            </p>
+          </div>
+
+          <div
+            class="flex items-center gap-4 rounded-xl p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark"
+          >
+            <div
+              class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary"
+            >
+              <span class="material-symbols-outlined">water_drop</span>
+            </div>
+            <p class="font-bold text-text-light dark:text-text-dark">
+              سقيا الماء
+            </p>
+          </div>
+
+          <div
+            class="flex items-center gap-4 rounded-xl p-4 bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark"
+          >
+            <div
+              class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary"
+            >
+              <span class="material-symbols-outlined">volunteer_activism</span>
+            </div>
+            <p class="font-bold text-text-light dark:text-text-dark">
+              رعاية المرضى
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <div
+        class="fixed bottom-0 left-0 right-0 p-4 bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark"
+      >
+        <button
+          class="w-full h-14 rounded-xl bg-primary text-white font-bold text-lg"
+        >
+          ساهم بالوقف
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

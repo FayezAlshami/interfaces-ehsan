@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>خدمة الإهداء - Gift Service</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#567c8d", // Bright neon green from screenshot
+              secondary: "#c8d9e6",
+              "background-light": "#f5efeb", // Gray-50
+              "background-dark": "#567c8d", // Gray-900
+              "card-light": "#567c8d",
+              "card-dark": "#567c8d",
+              "border-light": "#567c8d",
+              "border-dark": "#567c8d",
+            },
+            fontFamily: {
+              display: ["Tajawal", "sans-serif"],
+              body: ["Tajawal", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.75rem", // 12px
+              xl: "1rem", // 16px
+              "2xl": "1.5rem", // 24px
+            },
+            boxShadow: {
+              soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Tajawal", sans-serif;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .toggle-checkbox:checked {
+        right: 0;
+        border-color: #7e9df1;
+      }
+      .toggle-checkbox:checked + .toggle-label {
+        background-color: #73867d;
+      }
+      .transition-colors {
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 transition-colors duration-300 min-h-screen pb-32"
+  >
+    <header
+      class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-border-light dark:border-border-dark px-4 py-4 flex items-center justify-between shadow-sm"
+    >
+      <div class="w-8"></div>
+      <h1 class="text-xl font-bold text-gray-900 dark:text-white">
+        خدمة الإهداء
+      </h1>
+      <button
+        class="w-8 h-8 flex items-center justify-center text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition"
+      >
+        <span class="material-icons-round text-2xl rotate-180">arrow_back</span>
+      </button>
+    </header>
+    <main class="max-w-md mx-auto px-4 py-6 space-y-8">
+      <section>
+        <div class="mb-4">
+          <h2 class="text-xl font-bold text-gray-900 dark:text-white">
+            اختر مناسبة الإهداء
+          </h2>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            اختر التصميم المناسب لبطاقة الإهداء
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="relative group cursor-pointer">
+            <div
+              class="absolute top-2 right-2 z-10 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center shadow-md"
+            >
+              <span class="material-icons-round text-white text-sm">check</span>
+            </div>
+            <div
+              class="bg-green-50 dark:bg-green-900/20 border-2 border-green-400 rounded-2xl overflow-hidden shadow-soft h-36 flex flex-col items-center justify-center p-3 transition-transform transform active:scale-95"
+            >
+              <div
+                class="w-16 h-20 bg-gradient-to-br from-green-100 to-green-200 dark:from-green-800 dark:to-green-700 rounded shadow-sm border border-green-200 dark:border-green-600 flex items-center justify-center mb-2"
+              >
+                <span
+                  class="text-[10px] text-green-800 dark:text-green-100 font-serif opacity-70 text-center px-1"
+                  >Best Wishes</span
+                >
+              </div>
+            </div>
+            <div class="mt-2 text-center">
+              <h3 class="font-bold text-gray-800 dark:text-white">عام</h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400">
+                لكل المناسبات
+              </p>
+            </div>
+          </div>
+          <div class="cursor-pointer group">
+            <div
+              class="bg-white dark:bg-card-dark border border-gray-100 dark:border-border-dark rounded-2xl overflow-hidden shadow-soft h-36 relative transition-transform transform active:scale-95"
+            >
+              <img
+                alt="Healing occasion card"
+                class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                src="images/شفاء.jpg"
+              />
+              <div
+                class="absolute inset-0 bg-yellow-900/10 dark:bg-yellow-900/30"
+              ></div>
+            </div>
+            <div class="mt-2 text-center">
+              <h3 class="font-bold text-gray-800 dark:text-white">الشفاء</h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400">شفاء مريض</p>
+            </div>
+          </div>
+          <div class="cursor-pointer group">
+            <div
+              class="bg-white dark:bg-card-dark border border-gray-100 dark:border-border-dark rounded-2xl overflow-hidden shadow-soft h-36 relative transition-transform transform active:scale-95"
+            >
+              <img
+                alt="Work occasion card"
+                class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaAZ3xkORJGABRR42e-XeGeCNYBxYe9BG1-WByLx65rkRlzLW-G9ao1YxN7DX9uniBSL9XRhOj9hw2bhVTeVmKpCBOUTcKPiTinvTloyUBv7MBo2l7wmwKT_6GLEzpbWL6ttzl0zPGB1GTipTAKx9RVpZG8znkIYofkxjGXKL27liikCfnXsVnlX5y2hQv9tTbpYEJ1SVxnBT00bIegFsmuDg853YUYEN-7OSlWFx8ODoFePfA8Q1k9dk3T-sApC41C8GYQlecuTsY"
+              />
+            </div>
+            <div class="mt-2 text-center">
+              <h3 class="font-bold text-gray-800 dark:text-white">العمل</h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400">
+                وظيفة جديدة
+              </p>
+            </div>
+          </div>
+          <div class="cursor-pointer group">
+            <div
+              class="bg-white dark:bg-card-dark border border-gray-100 dark:border-border-dark rounded-2xl overflow-hidden shadow-soft h-36 relative transition-transform transform active:scale-95"
+            >
+              <img
+                alt="Parents occasion card"
+                class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                src="images/بروالدين.jpg"
+              />
+            </div>
+            <div class="mt-2 text-center">
+              <h3 class="font-bold text-gray-800 dark:text-white">الوالدين</h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400">
+                بر الوالدين
+              </p>
+            </div>
+          </div>
+          <div class="cursor-pointer group">
+            <div
+              class="bg-white dark:bg-card-dark border border-gray-100 dark:border-border-dark rounded-2xl overflow-hidden shadow-soft h-36 relative transition-transform transform active:scale-95"
+            >
+              <img
+                alt="Newborn occasion card"
+                class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCybr7koNxUDt7X8A8rNMVVzFWXTRflPokb5nRnSfTJ2K_-o9uwA1MEJi67WAE_N-Cd2driMGd8QYH61g_D2dYqf7QXwbVcKcKOI55Rs7dgAeP9y41DMUj4Wvneu6dKF3EnLHClkOWazWxHgcKgZWOr-Qi1KtebKU72B0Eyc7u9rXH5u2YDd_RsNjRXPfxSt0CXWxA_67hqvXkMLnt9RIXrDvV-AFZlEDQrtKosFSYg1e0qekOVIicW8gB_a5psv5K6HMTVxbBV60i0"
+              />
+            </div>
+            <div class="mt-2 text-center">
+              <h3 class="font-bold text-gray-800 dark:text-white">مواليد</h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400">قدوم مولود</p>
+            </div>
+          </div>
+          <div class="cursor-pointer group">
+            <div
+              class="bg-white dark:bg-card-dark border border-gray-100 dark:border-border-dark rounded-2xl overflow-hidden shadow-soft h-36 relative transition-transform transform active:scale-95 bg-orange-50 dark:bg-orange-900/10 flex items-center justify-center"
+            >
+              <img
+                alt="Graduation occasion card"
+                class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity"
+                src="images/تخرج.jpg"
+              />
+            </div>
+            <div class="mt-2 text-center">
+              <h3 class="font-bold text-gray-800 dark:text-white">تخرج</h3>
+              <p class="text-xs text-gray-500 dark:text-gray-400">
+                حفلات التخرج
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="bg-white dark:bg-card-dark rounded-2xl p-5 shadow-soft border border-gray-100 dark:border-border-dark relative overflow-hidden"
+      >
+        <div class="mb-5 flex items-start justify-between">
+          <div>
+            <h2
+              class="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2"
+            >
+              مجال التبرع
+            </h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+              أين تود أن يذهب أجرك؟
+            </p>
+          </div>
+          <div
+            class="bg-primary/10 dark:bg-primary/20 p-2 rounded-xl text-primary flex items-center justify-center"
+          >
+            <span class="material-icons-round">volunteer_activism</span>
+          </div>
+        </div>
+        <button
+          class="w-full bg-gray-50 dark:bg-slate-800 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-primary dark:hover:border-primary text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary rounded-xl px-4 py-3 mb-5 flex items-center justify-between transition-all group"
+        >
+          <div class="flex items-center gap-2">
+            <span class="material-icons-round text-lg opacity-70">search</span>
+            <span class="font-bold text-sm">اختيار المجال</span>
+          </div>
+          <span
+            class="material-icons-round group-hover:translate-y-0.5 transition-transform"
+            >expand_more</span
+          >
+        </button>
+        <div
+          class="flex overflow-x-auto space-x-3 space-x-reverse pb-2 scrollbar-hide"
+        >
+          <button
+            class="flex-shrink-0 flex items-center space-x-2 space-x-reverse bg-primary text-white dark:text-gray-900 px-4 py-3 rounded-xl font-bold shadow-md transform transition active:scale-95 border border-transparent"
+          >
+            <span class="material-icons-round text-lg">face</span>
+            <span>رعاية أيتام</span>
+          </button>
+          <button
+            class="flex-shrink-0 flex items-center space-x-2 space-x-reverse bg-white dark:bg-slate-700 text-gray-600 dark:text-gray-300 px-4 py-3 rounded-xl font-medium border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-slate-600 transition shadow-sm"
+          >
+            <span class="material-icons-round text-lg">medical_services</span>
+            <span>رعاية صحية</span>
+          </button>
+          <button
+            class="flex-shrink-0 flex items-center space-x-2 space-x-reverse bg-white dark:bg-slate-700 text-gray-600 dark:text-gray-300 px-4 py-3 rounded-xl font-medium border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-slate-600 transition shadow-sm"
+          >
+            <span class="material-icons-round text-lg">water_drop</span>
+            <span>سقيا الماء</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-border-dark px-4 py-4 z-40 shadow-[0_-4px_20px_-2px_rgba(0,0,0,0.1)]"
+    >
+      <div class="max-w-md mx-auto">
+        <button
+          class="w-full bg-primary hover:bg-green-500 text-gray-900 dark:text-gray-900 font-bold py-4 rounded-xl shadow-lg shadow-green-500/30 active:scale-[0.98] transition-transform flex items-center justify-center space-x-2 space-x-reverse"
+        >
+          <span>ادخال بيانات المهدى إليه</span>
+          <span class="material-icons-round">arrow_back</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

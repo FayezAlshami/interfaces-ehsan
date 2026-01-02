@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>إشعار تبرع المحسن الصغير</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2F4157",
+              "background-light": "#F4EFEB",
+              "background-dark": "#2F4157",
+              "text-light": "#2F4157",
+              "text-dark": "#FFFFFF",
+              "text-muted-light": "#577C8E",
+              "text-muted-dark": "#C7D9E5",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#577C8E",
+              "border-light": "#C7D9E5",
+              "border-dark": "#577C8E",
+            },
+            fontFamily: { display: ["Manrope", "sans-serif"] },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative min-h-screen w-full flex flex-col overflow-x-hidden">
+      <div class="flex items-center p-4 pb-2 justify-between">
+        <div
+          class="flex size-12 items-center justify-start text-text-light dark:text-text-dark"
+        >
+          <span class="material-symbols-outlined">arrow_back_ios</span>
+        </div>
+        <h2
+          class="flex-1 text-center text-lg font-bold text-text-light dark:text-text-dark"
+        >
+          إشعار تبرع
+        </h2>
+        <div class="flex size-12 items-center justify-end">
+          <span class="material-symbols-outlined">close</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col flex-grow px-4 pt-8 pb-6">
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-surface-light dark:bg-surface-dark rounded-xl w-full p-6 border border-border-light dark:border-border-dark"
+          >
+            <div class="flex justify-center mb-6">
+              <div
+                class="flex items-center justify-center size-20 rounded-full bg-primary/20 text-primary"
+              >
+                <span class="material-symbols-outlined text-5xl"
+                  >volunteer_activism</span
+                >
+              </div>
+            </div>
+
+            <h1
+              class="text-text-light dark:text-text-dark text-[28px] font-bold text-center pb-2"
+            >
+              عمل رائع من محسننا الصغير!
+            </h1>
+
+            <p
+              class="text-text-muted-light dark:text-text-muted-dark text-sm text-center pb-6"
+            >
+              قبل ٥ دقائق
+            </p>
+
+            <div
+              class="border-t border-border-light dark:border-border-dark py-4 flex justify-between"
+            >
+              <p
+                class="text-text-muted-light dark:text-text-muted-dark text-sm"
+              >
+                المحسن الصغير
+              </p>
+              <p class="text-text-light dark:text-text-dark font-semibold">
+                خالد
+              </p>
+            </div>
+
+            <div
+              class="border-t border-border-light dark:border-border-dark py-4 flex justify-between"
+            >
+              <p
+                class="text-text-muted-light dark:text-text-muted-dark text-sm"
+              >
+                تبرع لصالح
+              </p>
+              <p class="text-text-light dark:text-text-dark font-semibold">
+                بناء مسجد
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-full mt-4 rounded-xl overflow-hidden aspect-[2/1] bg-center bg-cover"
+            style="background-image: url('image/mosque.jpg')"
+          ></div>
+
+          <div class="w-full pt-6">
+            <button
+              class="w-full h-14 rounded-xl bg-primary text-white font-bold"
+            >
+              عرض تفاصيل الحالة
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

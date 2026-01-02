@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>تعديل التبرع</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<script>
+tailwind.config={
+darkMode:"class",
+theme:{
+extend:{
+colors:{
+primary:"#2F4157",
+"background-light":"#F4EFEB",
+"background-dark":"#2F4157",
+"text-light":"#2F4157",
+"text-dark":"#FFFFFF",
+"text-muted-light":"#577C8E",
+"text-muted-dark":"#C7D9E5",
+"input-light":"#FFFFFF",
+"input-dark":"#577C8E",
+"border-light":"#C7D9E5",
+"border-dark":"#577C8E",
+"destructive":"#dc3545"
+},
+fontFamily:{display:["Manrope","sans-serif"]},
+borderRadius:{DEFAULT:"0.75rem",lg:"1rem",xl:"1.25rem",full:"9999px"}
+}
+}
+}
+</script>
+
+<style>
+body{min-height:max(884px,100dvh);}
+.material-symbols-outlined{font-variation-settings:"FILL" 0,"wght" 400,"GRAD" 0,"opsz" 24;}
+</style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+
+<header class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-12 items-center justify-center text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined">close</span>
+</div>
+<h2 class="flex-1 text-center text-lg font-bold text-text-light dark:text-text-dark">
+تعديل التبرع
+</h2>
+<div class="size-12"></div>
+</header>
+
+<main class="flex-1 flex flex-col items-center px-4 py-6">
+<div class="w-full max-w-[480px]">
+
+<h1 class="text-text-light dark:text-text-dark text-[32px] font-bold text-center pb-3 pt-6">
+كفالة يتيم
+</h1>
+
+<p class="text-text-muted-light dark:text-text-muted-dark text-base text-center pb-6">
+أدخل المبلغ الجديد
+</p>
+
+<label class="flex flex-col gap-2">
+<p class="text-text-light dark:text-text-dark font-medium">
+مبلغ التبرع
+</p>
+
+<div class="flex rounded-xl overflow-hidden border border-border-light dark:border-border-dark">
+<input class="flex-1 h-14 px-4 text-2xl text-center bg-input-light dark:bg-input-dark text-text-light dark:text-text-dark focus:outline-0"
+placeholder="50000"/>
+<div class="flex items-center px-4 bg-input-light dark:bg-input-dark text-text-muted-light dark:text-text-muted-dark font-semibold">
+ل.س
+</div>
+</div>
+</label>
+
+<div class="h-10"></div>
+
+<div class="flex flex-col gap-3">
+<button class="h-14 rounded-xl bg-primary text-white font-bold">
+حفظ التغييرات
+</button>
+
+<button class="h-14 rounded-xl bg-transparent text-destructive font-bold border border-destructive">
+حذف من السلة
+</button>
+</div>
+
+</div>
+</main>
+
+</div>
+</body>
+</html>

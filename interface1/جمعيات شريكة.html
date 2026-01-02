@@ -1,0 +1,158 @@
+
+<html><head><script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          primary: "#00997b", // Teal green from screenshot
+          "background-light": "#f3f4f6",
+          "background-dark": "#0e1621",
+          "card-light": "#ffffff",
+          "card-dark": "#1a2533",
+          "secondary-text-light": "#4b5563",
+          "secondary-text-dark": "#9ca3af",
+          "border-dark": "#2b3847",
+        },
+        fontFamily: {
+          display: ["Tajawal", "sans-serif"],
+        },
+        borderRadius: {
+          DEFAULT: "0.5rem",
+        },
+      },
+    },
+  };
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased min-h-screen">
+<div class="max-w-md mx-auto min-h-screen relative pb-20 bg-background-light dark:bg-background-dark overflow-hidden shadow-xl">
+<header class="flex items-center justify-between px-4 py-4 sticky top-0 z-10 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-border-dark">
+<button class="p-2 -mr-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300">
+<span class="material-icons-round text-2xl">arrow_forward_ios</span>
+</button>
+<h1 class="text-lg font-bold text-center flex-grow">الجمعيات الشريكة</h1>
+<div class="w-8"></div> 
+</header>
+<main class="px-4 pt-6 space-y-6">
+<section class="flex flex-col items-center justify-center relative py-4">
+<div class="relative w-48 h-24 overflow-hidden mb-2">
+<div class="absolute top-0 left-0 w-48 h-48 rounded-full border-[1.2rem] border-gray-200 dark:border-gray-700 box-border"></div>
+<div class="absolute top-0 left-0 w-48 h-48 rounded-full border-[1.2rem] border-primary border-b-transparent border-l-transparent transform rotate-45 box-border" style="clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%); transform: rotate(-135deg);"></div>
+</div>
+<div class="text-center -mt-8">
+<p class="text-sm text-gray-500 dark:text-gray-400 font-medium mb-1">نسبة الحوكمة</p>
+<p class="text-4xl font-bold text-white dark:text-white">91<span class="text-xl align-top">%</span></p>
+</div>
+<div class="mt-6 bg-gray-200 dark:bg-card-dark rounded-lg p-3 flex items-start gap-3 w-full text-xs text-gray-600 dark:text-gray-300">
+<span class="material-icons-round text-sm mt-0.5 opacity-70">info</span>
+<p class="leading-relaxed">متوسط درجات حوكمة الجمعيات الشريكة وفق معايير الشفافية والمساءلة في العمل الإنساني داخل سوريا.</p>
+</div>
+</section>
+<section class="space-y-4">
+<h2 class="text-primary font-bold text-xl text-right">الجمعيات الشريكة في سوريا</h2>
+<div class="relative">
+<input class="w-full bg-white dark:bg-card-dark border-none rounded-lg py-3 pr-4 pl-12 text-sm text-gray-700 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary shadow-sm" dir="rtl" placeholder="بحث باسم الجمعية..." type="text"/>
+<span class="material-icons-round absolute left-3 top-2.5 text-gray-400">search</span>
+</div>
+</section>
+<section class="space-y-2">
+<p class="text-sm font-semibold text-gray-500 dark:text-gray-400 text-right">13 منطقة</p>
+<div class="flex overflow-x-auto gap-3 pb-2 no-scrollbar px-1 snap-x" dir="rtl">
+<button class="snap-start flex-shrink-0 bg-primary text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-opacity-90 transition shadow-sm">
+                الكل
+            </button>
+<button class="snap-start flex-shrink-0 bg-white dark:bg-card-dark text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition shadow-sm">
+                محافظة دمشق
+            </button>
+<button class="snap-start flex-shrink-0 bg-white dark:bg-card-dark text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition shadow-sm">
+                محافظة حلب
+            </button>
+<button class="snap-start flex-shrink-0 bg-white dark:bg-card-dark text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition shadow-sm">
+                محافظة إدلب
+            </button>
+<button class="snap-start flex-shrink-0 bg-white dark:bg-card-dark text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition shadow-sm">
+                ريف دمشق
+            </button>
+</div>
+</section>
+<section class="space-y-4 pb-10">
+<div class="bg-white dark:bg-card-dark rounded-xl p-4 shadow-sm border border-gray-100 dark:border-border-dark flex flex-row-reverse items-center gap-4">
+<div class="w-16 h-16 flex-shrink-0 bg-gray-50 dark:bg-white rounded-lg flex items-center justify-center p-1 border border-gray-100">
+<img alt="شعار جمعية الإحسان" class="w-full h-full object-contain opacity-80" src="images/جمعية1.jpg"/>
+</div>
+<div class="flex-grow text-right space-y-1">
+<h3 class="font-bold text-gray-800 dark:text-white text-base">جمعية الإحسان الخيرية</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">خدمات طبية وإغاثية</p>
+<div class="flex flex-row-reverse items-center justify-between mt-2 pt-2 border-t border-gray-100 dark:border-gray-700/50">
+<div class="flex items-center gap-1 text-primary">
+<span class="text-xs font-bold">12,500</span>
+<span class="text-[10px] text-gray-500 dark:text-gray-400">مستفيد</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons-round text-gray-400 text-xs">location_on</span>
+<span class="text-[10px] text-gray-500 dark:text-gray-400">دمشق</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark rounded-xl p-4 shadow-sm border border-gray-100 dark:border-border-dark flex flex-row-reverse items-center gap-4">
+<div class="w-16 h-16 flex-shrink-0 bg-gray-50 dark:bg-white rounded-lg flex items-center justify-center p-1 border border-gray-100">
+<img alt="شعار جمعية العطاء" class="w-full h-full object-contain opacity-80" src="images/جمعية2.jpg"/>
+</div>
+<div class="flex-grow text-right space-y-1">
+<h3 class="font-bold text-gray-800 dark:text-white text-base">مؤسسة العطاء للإغاثة</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">دعم الأيتام والأسر المتعففة</p>
+<div class="flex flex-row-reverse items-center justify-between mt-2 pt-2 border-t border-gray-100 dark:border-gray-700/50">
+<div class="flex items-center gap-1 text-primary">
+<span class="text-xs font-bold">8,200</span>
+<span class="text-[10px] text-gray-500 dark:text-gray-400">مستفيد</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons-round text-gray-400 text-xs">location_on</span>
+<span class="text-[10px] text-gray-500 dark:text-gray-400">حلب</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-card-dark rounded-xl p-4 shadow-sm border border-gray-100 dark:border-border-dark flex flex-row-reverse items-center gap-4">
+<div class="w-16 h-16 flex-shrink-0 bg-gray-50 dark:bg-white rounded-lg flex items-center justify-center p-1 border border-gray-100">
+<img alt="شعار جمعية ساعد" class="w-full h-full object-contain opacity-80" src="images/جمعية3.jpg"/>
+</div>
+<div class="flex-grow text-right space-y-1">
+<h3 class="font-bold text-gray-800 dark:text-white text-base">جمعية ساعد للتنمية</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400">مشاريع تنموية وتعليمية</p>
+<div class="flex flex-row-reverse items-center justify-between mt-2 pt-2 border-t border-gray-100 dark:border-gray-700/50">
+<div class="flex items-center gap-1 text-primary">
+<span class="text-xs font-bold">4,150</span>
+<span class="text-[10px] text-gray-500 dark:text-gray-400">مستفيد</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-icons-round text-gray-400 text-xs">location_on</span>
+<span class="text-[10px] text-gray-500 dark:text-gray-400">ريف دمشق</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 w-full max-w-md bg-white dark:bg-card-dark border-t border-gray-200 dark:border-border-dark flex justify-around items-center py-3 z-50">
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary">
+
+</nav>
+</div>
+<style>.no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }.no-scrollbar {
+          -ms-overflow-style: none;scrollbar-width: none;}
+  </style>
+
+</body></html>

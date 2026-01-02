@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>إدخال رمز التحقق - OTP Input (مع زر الرئيسية!)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#17cf54",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112116",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .otp-input::-webkit-outer-spin-button,
+      .otp-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .otp-input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="font-display">
+    <div
+      class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark text-[#1D1D1F] dark:text-gray-200"
+    >
+      <div class="flex items-center p-4">
+        <div class="flex size-10 items-center justify-center">
+          <span class="material-symbols-outlined text-3xl"
+            >arrow_back_ios_new</span
+          >
+        </div>
+        <h1 class="flex-1 text-center text-lg font-bold">إدخال رمز التحقق</h1>
+        <div class="size-10"></div>
+      </div>
+      <div class="flex flex-1 flex-col items-center px-4 pt-8">
+        <p
+          class="text-base text-center leading-normal text-gray-600 dark:text-gray-400"
+        >
+          أدخل الرمز المكون من 6 أرقام الذي تم إرساله إلى رقمك
+        </p>
+        <div class="flex justify-center py-10">
+          <fieldset class="relative flex gap-2 sm:gap-4" dir="ltr">
+            <input
+              class="otp-input flex h-16 w-12 sm:h-20 sm:w-16 rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-background-light dark:bg-background-dark text-center text-2xl font-bold [appearance:textfield] focus:border-primary focus:outline-0 focus:ring-0 dark:focus:border-primary"
+              maxlength="1"
+              onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowLeft'&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextElementSibling&amp;&amp;this.nextElementSibling.focus());"
+              onkeyup="javascript:this.value.length&gt;0 &amp;&amp; this.nextElementSibling &amp;&amp; this.nextElementSibling.focus();"
+              type="number"
+            />
+            <input
+              class="otp-input flex h-16 w-12 sm:h-20 sm:w-16 rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-background-light dark:bg-background-dark text-center text-2xl font-bold [appearance:textfield] focus:border-primary focus:outline-0 focus:ring-0 dark:focus:border-primary"
+              maxlength="1"
+              onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowLeft'&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextElementSibling&amp;&amp;this.nextElementSibling.focus());"
+              onkeyup="javascript:this.value.length&gt;0 &amp;&amp; this.nextElementSibling &amp;&amp; this.nextElementSibling.focus();"
+              type="number"
+            />
+            <input
+              class="otp-input flex h-16 w-12 sm:h-20 sm:w-16 rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-background-light dark:bg-background-dark text-center text-2xl font-bold [appearance:textfield] focus:border-primary focus:outline-0 focus:ring-0 dark:focus:border-primary"
+              maxlength="1"
+              onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowLeft'&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextElementSibling&amp;&amp;this.nextElementSibling.focus());"
+              onkeyup="javascript:this.value.length&gt;0 &amp;&amp; this.nextElementSibling &amp;&amp; this.nextElementSibling.focus();"
+              type="number"
+            />
+            <input
+              class="otp-input flex h-16 w-12 sm:h-20 sm:w-16 rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-background-light dark:bg-background-dark text-center text-2xl font-bold [appearance:textfield] focus:border-primary focus:outline-0 focus:ring-0 dark:focus:border-primary"
+              maxlength="1"
+              onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowLeft'&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextElementSibling&amp;&amp;this.nextElementSibling.focus());"
+              onkeyup="javascript:this.value.length&gt;0 &amp;&amp; this.nextElementSibling &amp;&amp; this.nextElementSibling.focus();"
+              type="number"
+            />
+            <input
+              class="otp-input flex h-16 w-12 sm:h-20 sm:w-16 rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-background-light dark:bg-background-dark text-center text-2xl font-bold [appearance:textfield] focus:border-primary focus:outline-0 focus:ring-0 dark:focus:border-primary"
+              maxlength="1"
+              onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowLeft'&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextElementSibling&amp;&amp;this.nextElementSibling.focus());"
+              onkeyup="javascript:this.value.length&gt;0 &amp;&amp; this.nextElementSibling &amp;&amp; this.nextElementSibling.focus();"
+              type="number"
+            />
+            <input
+              class="otp-input flex h-16 w-12 sm:h-20 sm:w-16 rounded-lg border-2 border-gray-200 dark:border-gray-600 bg-background-light dark:bg-background-dark text-center text-2xl font-bold [appearance:textfield] focus:border-primary focus:outline-0 focus:ring-0 dark:focus:border-primary"
+              maxlength="1"
+              onkeydown="javascript:(event.key=='Backspace'&amp;&amp;this.value===''&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowLeft'&amp;&amp;this.previousElementSibling&amp;&amp;this.previousElementSibling.focus())||(event.key==='ArrowRight'&amp;&amp;this.nextElementSibling&amp;&amp;this.nextElementSibling.focus());"
+              onkeyup="javascript:this.value.length&gt;0 &amp;&amp; this.nextElementSibling &amp;&amp; this.nextElementSibling.focus();"
+              type="number"
+            />
+          </fieldset>
+        </div>
+        <div class="text-center">
+          <p class="text-sm text-gray-500 dark:text-gray-400">
+            يمكنك إعادة إرسال الرمز خلال
+            <span class="font-bold text-[#1D1D1F] dark:text-gray-200"
+              >00:59</span
+            >
+          </p>
+          <div class="py-3">
+            <button
+              class="min-w-[84px] cursor-pointer rounded-full h-10 px-4 text-sm font-bold text-gray-400 dark:text-gray-500"
+              disabled=""
+            >
+              <span class="truncate">إعادة إرسال الرمز</span>
+            </button>
+          </div>
+        </div>
+        <div class="grow"></div>
+        <div class="w-full pb-8 px-4">
+          <button
+            class="w-full h-14 bg-primary text-white rounded-full text-lg font-bold"
+          >
+            الانتقال إلى الرئيسية
+          </button>
+        </div>
+      </div>
+      <div class="absolute bottom-32 left-1/2 -translate-x-1/2 transform">
+        <div
+          class="flex items-center gap-3 rounded-full bg-primary/20 dark:bg-primary/30 px-6 py-3 text-primary dark:text-primary"
+        >
+          <span class="material-symbols-outlined text-2xl">check_circle</span>
+          <p class="font-bold">تم التحقق بنجاح</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

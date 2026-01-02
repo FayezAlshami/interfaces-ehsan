@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>الدفع لعدة حالات</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<script>
+tailwind.config={
+darkMode:"class",
+theme:{
+extend:{
+colors:{
+primary:"#2F4157",
+"background-light":"#F4EFEB",
+"background-dark":"#2F4157",
+"text-light":"#2F4157",
+"text-dark":"#FFFFFF",
+"text-muted-light":"#577C8E",
+"text-muted-dark":"#C7D9E5",
+"surface-light":"#FFFFFF",
+"surface-dark":"#577C8E",
+"border-light":"#C7D9E5",
+"border-dark":"#577C8E"
+},
+fontFamily:{display:["Manrope","sans-serif"]},
+borderRadius:{DEFAULT:"0.5rem",lg:"0.75rem",xl:"1rem",full:"9999px"}
+}
+}
+}
+</script>
+
+<style>
+body{min-height:max(884px,100dvh);}
+.material-symbols-outlined{font-variation-settings:"FILL" 0,"wght" 400,"GRAD" 0,"opsz" 24;}
+.custom-radio:checked{background-color:#2F4157;border-color:#2F4157;}
+</style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative min-h-screen w-full flex flex-col overflow-x-hidden">
+
+<header class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-10 items-center justify-center text-text-light">
+<span class="material-symbols-outlined">arrow_forward_ios</span>
+</div>
+<h1 class="flex-1 text-center text-xl font-bold text-text-light">
+الدفع لعدة حالات
+</h1>
+<div class="w-10"></div>
+</header>
+
+<main class="flex-grow px-4 pt-4">
+
+<div class="rounded-xl bg-surface-light p-5 border border-border-light">
+<div class="flex flex-col items-center gap-2 py-4">
+<p class="text-text-muted-light">المبلغ الإجمالي</p>
+<p class="text-4xl font-bold text-text-light">50,000 ل.س</p>
+<p class="text-sm text-text-muted-light">لـ 3 حالات</p>
+</div>
+</div>
+
+<h2 class="text-text-light text-lg font-bold pt-8 pb-3">
+اختر طريقة الدفع
+</h2>
+
+<div class="flex flex-col gap-2 rounded-xl bg-surface-light p-2 border border-border-light">
+
+<label class="flex items-center justify-between gap-4 rounded-lg p-4 bg-background-light">
+<div class="flex items-center gap-4">
+<div class="flex size-10 items-center justify-center rounded-lg bg-[#C7D9E5] text-primary">
+<span class="material-symbols-outlined">phone_iphone</span>
+</div>
+<p class="font-medium text-text-light">شام كاش</p>
+</div>
+<input checked class="custom-radio h-5 w-5 rounded-full border-2 border-border-light" type="radio" name="payment"/>
+</label>
+
+<label class="flex items-center justify-between gap-4 rounded-lg p-4 bg-background-light">
+<div class="flex items-center gap-4">
+<div class="flex size-10 items-center justify-center rounded-lg bg-[#C7D9E5] text-primary">
+<span class="material-symbols-outlined">smartphone</span>
+</div>
+<p class="font-medium text-text-light">سيرياتيل كاش</p>
+</div>
+<input class="custom-radio h-5 w-5 rounded-full border-2 border-border-light" type="radio" name="payment"/>
+</label>
+
+</div>
+
+</main>
+
+<footer class="sticky bottom-0 p-4 bg-background-light border-t border-border-light">
+<button class="w-full h-14 rounded-xl bg-primary text-white font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">lock</span>
+إتمام الدفع
+</button>
+</footer>
+
+</div>
+</body>
+</html>

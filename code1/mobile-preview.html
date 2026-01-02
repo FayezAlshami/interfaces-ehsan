@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mobile Preview</title>
+
+    <style>
+      :root {
+        --frame: #111827;
+        --bg: #e5e7eb;
+        --radius: 44px;
+        --w: 390px;
+        --h: 844px;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg);
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      }
+      .topbar {
+        width: min(980px, 92vw);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+      }
+      select,
+      a {
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        background: white;
+        font-size: 14px;
+        text-decoration: none;
+        color: #111;
+      }
+      .phone {
+        width: var(--w);
+        height: var(--h);
+        background: var(--frame);
+        border-radius: var(--radius);
+        padding: 14px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+        position: relative;
+      }
+      .phone::before {
+        content: "";
+        position: absolute;
+        top: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 30% 30%, #4a6cff, #000 70%);
+        box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.3),
+          0 0 3px rgba(0, 0, 0, 0.8);
+      }
+
+      .screen {
+        width: 100%;
+        height: 100%;
+        border-radius: calc(var(--radius) - 14px);
+        overflow: hidden;
+        background: white;
+      }
+
+      /* التمرير شغال + scrollbar مخفي */
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+        background: white;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      iframe::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="topbar">
+      <select id="page"></select>
+      <a id="open" href="#" target="_blank">فتح الصفحة مباشرة</a>
+    </div>
+
+    <div class="phone">
+      <div class="screen">
+        <iframe id="frame" src=""></iframe>
+      </div>
+    </div>
+
+    <script>
+      const sel = document.getElementById("page");
+      const frame = document.getElementById("frame");
+      const openBtn = document.getElementById("open");
+
+      function setPage(p) {
+        frame.src = p;
+        openBtn.href = p;
+        // يخلي الرابط يحمل الصفحة المختارة
+        const url = new URL(location.href);
+        url.searchParams.set("page", p);
+        history.replaceState({}, "", url);
+      }
+
+      // 1) جلب قائمة الملفات من السيرفر (Live Server يدعم عرض directory غالباً)
+      async function loadPages() {
+        // يقرأ صفحة الدليل الحالية ويستخرج أسماء ملفات html
+        const res = await fetch("./");
+        const html = await res.text();
+
+        // يلقط كل الروابط التي تنتهي بـ .html (باستثناء mobile-preview.html)
+        const matches = [...html.matchAll(/href="([^"]+\.html)"/g)]
+          .map((m) => decodeURIComponent(m[1]))
+          .filter(
+            (name) => !name.toLowerCase().includes("mobile-preview.html")
+          );
+
+        // إزالة التكرار
+        const pages = [...new Set(matches)].sort((a, b) =>
+          a.localeCompare(b, "ar")
+        );
+
+        // عبّي القائمة
+        sel.innerHTML = pages
+          .map((p) => `<option value="${p}">${p}</option>`)
+          .join("");
+
+        // اختيار افتراضي: من query أو أول صفحة
+        const params = new URLSearchParams(location.search);
+        const q = params.get("page");
+        const first = pages[0] || "index1.html";
+        const chosen = q && pages.includes(q) ? q : first;
+
+        sel.value = chosen;
+        setPage(chosen);
+      }
+
+      sel.addEventListener("change", (e) => setPage(e.target.value));
+
+      loadPages().catch(() => {
+        // fallback إذا السيرفر ما بيرجع directory listing
+        const fallback = ["index1.html"];
+        sel.innerHTML = fallback
+          .map((p) => `<option value="${p}">${p}</option>`)
+          .join("");
+        setPage(fallback[0]);
+      });
+    </script>
+  </body>
+</html>

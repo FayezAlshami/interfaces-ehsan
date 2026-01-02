@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الأسئلة الشائعة</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2F4157",
+              "background-light": "#F4EFEB",
+              "background-dark": "#2F4157",
+              "text-light": "#2F4157",
+              "text-dark": "#FFFFFF",
+              "text-muted-light": "#577C8E",
+              "text-muted-dark": "#C7D9E5",
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#577C8E",
+              "border-light": "#C7D9E5",
+              "border-dark": "#577C8E",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        direction: rtl;
+        min-height: max(884px, 100dvh);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+        font-size: 24px;
+      }
+      details > summary {
+        list-style: none;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div
+      class="relative min-h-screen w-full flex flex-col bg-background-light dark:bg-background-dark overflow-x-hidden"
+    >
+      <div
+        class="sticky top-0 z-10 flex items-center p-4 pb-2 justify-between bg-background-light dark:bg-background-dark"
+      >
+        <div class="w-12"></div>
+        <h2
+          class="text-text-light dark:text-text-dark text-lg font-bold flex-1 text-center"
+        >
+          الأسئلة الشائعة
+        </h2>
+        <button
+          class="flex size-12 items-center justify-center text-text-light dark:text-text-dark"
+        >
+          <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </button>
+      </div>
+
+      <div class="px-4 py-3">
+        <label class="flex h-12 w-full">
+          <div class="flex w-full rounded-xl h-full">
+            <input
+              class="form-input flex-1 rounded-r-xl text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark px-4 text-base"
+              placeholder="ابحث عن سؤال..."
+            />
+            <div
+              class="flex items-center justify-center px-4 rounded-l-xl border border-l-0 border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark text-text-muted-light dark:text-text-muted-dark"
+            >
+              <span class="material-symbols-outlined">search</span>
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <div class="flex flex-col p-4 gap-3">
+        <details
+          class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-[15px] py-[7px]"
+          open
+        >
+          <summary
+            class="flex items-center justify-between gap-6 py-2 cursor-pointer"
+          >
+            <p class="text-text-light dark:text-text-dark text-sm font-medium">
+              كيف يمكنني التبرع؟
+            </p>
+            <span
+              class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark transition-transform group-open:rotate-180"
+              >expand_more</span
+            >
+          </summary>
+          <p
+            class="text-text-muted-light dark:text-text-muted-dark text-sm pb-2"
+          >
+            للتبرع، انتقل إلى قسم الحملات، اختر قضية، انقر على تبرع الآن، وأدخل
+            المبلغ وتفاصيل الدفع.
+          </p>
+        </details>
+
+        <details
+          class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-[15px] py-[7px]"
+        >
+          <summary
+            class="flex items-center justify-between gap-6 py-2 cursor-pointer"
+          >
+            <p class="text-text-light dark:text-text-dark text-sm font-medium">
+              هل معلومات الدفع الخاصة بي آمنة؟
+            </p>
+            <span
+              class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark"
+              >expand_more</span
+            >
+          </summary>
+          <p
+            class="text-text-muted-light dark:text-text-muted-dark text-sm pb-2"
+          >
+            نعم، نستخدم بوابات دفع آمنة ومعتمدة لتشفير جميع المعاملات وحماية
+            بياناتك.
+          </p>
+        </details>
+
+        <details
+          class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-[15px] py-[7px]"
+        >
+          <summary
+            class="flex items-center justify-between gap-6 py-2 cursor-pointer"
+          >
+            <p class="text-text-light dark:text-text-dark text-sm font-medium">
+              كيف أحصل على إيصال لتبرعي؟
+            </p>
+            <span
+              class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark"
+              >expand_more</span
+            >
+          </summary>
+          <p
+            class="text-text-muted-light dark:text-text-muted-dark text-sm pb-2"
+          >
+            بعد إتمام التبرع بنجاح، سيتم إرسال إيصال إلكتروني إلى بريدك المسجل
+            تلقائيًا.
+          </p>
+        </details>
+
+        <details
+          class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-[15px] py-[7px]"
+        >
+          <summary
+            class="flex items-center justify-between gap-6 py-2 cursor-pointer"
+          >
+            <p class="text-text-light dark:text-text-dark text-sm font-medium">
+              ما هي النسبة التي تذهب للقضية؟
+            </p>
+            <span
+              class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark"
+              >expand_more</span
+            >
+          </summary>
+          <p
+            class="text-text-muted-light dark:text-text-muted-dark text-sm pb-2"
+          >
+            نلتزم بالشفافية الكاملة، ويذهب الجزء الأكبر من التبرعات مباشرة إلى
+            القضية المختارة.
+          </p>
+        </details>
+
+        <details
+          class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark px-[15px] py-[7px]"
+        >
+          <summary
+            class="flex items-center justify-between gap-6 py-2 cursor-pointer"
+          >
+            <p class="text-text-light dark:text-text-dark text-sm font-medium">
+              كيف يمكنني إلغاء التبرع المتكرر؟
+            </p>
+            <span
+              class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark"
+              >expand_more</span
+            >
+          </summary>
+          <p
+            class="text-text-muted-light dark:text-text-muted-dark text-sm pb-2"
+          >
+            يمكنك إدارة أو إلغاء تبرعاتك المتكررة في أي وقت من خلال ملفك الشخصي.
+          </p>
+        </details>
+      </div>
+    </div>
+  </body>
+</html>

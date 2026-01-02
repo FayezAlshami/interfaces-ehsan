@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>تقرير الحالة المكتملة</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2F4157",
+              "background-light": "#F4EFEB",
+              "background-dark": "#2F4157",
+              "card-light": "#FFFFFF",
+              "card-dark": "#577C8E",
+              "text-primary-light": "#2F4157",
+              "text-primary-dark": "#FFFFFF",
+              "text-secondary-light": "#577C8E",
+              "text-secondary-dark": "#C7D9E5",
+              "border-light": "#C7D9E5",
+              "border-dark": "#577C8E",
+              "accent-light": "#C7D9E5",
+              "accent-dark": "#577C8E",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="font-display">
+    <div
+      class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden"
+    >
+      <div
+        class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10 border-b border-border-light dark:border-border-dark"
+      >
+        <div
+          class="flex size-12 items-center justify-center text-text-primary-light dark:text-text-primary-dark"
+        >
+          <span class="material-symbols-outlined text-3xl"
+            >arrow_forward_ios</span
+          >
+        </div>
+        <h2
+          class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold flex-1 text-center"
+        >
+          تقرير الحالة
+        </h2>
+        <div
+          class="flex size-12 items-center justify-center text-text-primary-light dark:text-text-primary-dark"
+        >
+          <span class="material-symbols-outlined text-3xl">share</span>
+        </div>
+      </div>
+      <div class="p-4 space-y-4">
+        <div>
+          <h1
+            class="text-text-primary-light dark:text-text-primary-dark text-[28px] font-bold pb-3"
+          >
+            تأمين مياه شرب نظيفة لقرية الأمل
+          </h1>
+          <div class="flex gap-3">
+            <div
+              class="flex h-8 items-center gap-x-2 rounded-lg bg-accent-light dark:bg-accent-dark pl-3 pr-4"
+            >
+              <span
+                class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark text-xl"
+                >check_circle</span
+              >
+              <p
+                class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium"
+              >
+                مكتملة
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="rounded-xl overflow-hidden bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark"
+        >
+          <div
+            class="w-full aspect-video bg-cover bg-center"
+            style="
+              background-image: url('image/687C28D6-B078-4C29-ADD4-F0DBB7073328.jpeg');
+            "
+          ></div>
+          <div class="p-4 space-y-1">
+            <p
+              class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold"
+            >
+              المبلغ الإجمالي
+            </p>
+            <p class="text-primary text-2xl font-bold">15,000,000 ل.س</p>
+            <p class="text-text-secondary-light dark:text-text-secondary-dark">
+              تم جمعه بنجاح لدعم المشروع
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-card-light dark:bg-card-dark rounded-xl p-4 border border-border-light dark:border-border-dark grid grid-cols-2 gap-4"
+        >
+          <div>
+            <p
+              class="text-text-secondary-light dark:text-text-secondary-dark text-sm"
+            >
+              رقم الحالة
+            </p>
+            <p
+              class="text-text-primary-light dark:text-text-primary-dark font-semibold"
+            >
+              12045
+            </p>
+          </div>
+          <div>
+            <p
+              class="text-text-secondary-light dark:text-text-secondary-dark text-sm"
+            >
+              المنطقة/المدينة
+            </p>
+            <p
+              class="text-text-primary-light dark:text-text-primary-dark font-semibold"
+            >
+              قرية الأمل
+            </p>
+          </div>
+          <div
+            class="col-span-2 border-t border-border-light dark:border-border-dark pt-4 grid grid-cols-2 gap-4"
+          >
+            <div>
+              <p
+                class="text-text-secondary-light dark:text-text-secondary-dark text-sm"
+              >
+                نوع الحالة
+              </p>
+              <p
+                class="text-text-primary-light dark:text-text-primary-dark font-semibold"
+              >
+                صحة ومياه
+              </p>
+            </div>
+            <div>
+              <p
+                class="text-text-secondary-light dark:text-text-secondary-dark text-sm"
+              >
+                الجهة المنفذة
+              </p>
+              <p
+                class="text-text-primary-light dark:text-text-primary-dark font-semibold"
+              >
+                جمعية النور الخيرية
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-primary/20 rounded-xl p-4 flex items-center gap-4 border border-primary/30"
+        >
+          <div
+            class="size-12 flex items-center justify-center bg-primary rounded-full text-white"
+          >
+            <span class="material-symbols-outlined text-3xl">groups</span>
+          </div>
+          <div>
+            <p
+              class="text-text-secondary-light dark:text-text-secondary-dark text-sm"
+            >
+              عدد المستفيدين
+            </p>
+            <p
+              class="text-text-primary-light dark:text-text-primary-dark text-2xl font-bold"
+            >
+              350 فرد
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-card-light dark:bg-card-dark rounded-xl p-4 border border-border-light dark:border-border-dark"
+        >
+          <div class="flex justify-between items-center">
+            <div class="text-center">
+              <p
+                class="text-text-secondary-light dark:text-text-secondary-dark text-xs"
+              >
+                تاريخ النشر
+              </p>
+              <p
+                class="text-text-primary-light dark:text-text-primary-dark font-semibold"
+              >
+                15 يناير 2023
+              </p>
+            </div>
+            <div
+              class="flex-1 h-px bg-border-light dark:bg-border-dark mx-4"
+            ></div>
+            <div class="text-center">
+              <p
+                class="text-text-secondary-light dark:text-text-secondary-dark text-xs"
+              >
+                تاريخ الاكتمال
+              </p>
+              <p
+                class="text-text-primary-light dark:text-text-primary-dark font-semibold"
+              >
+                28 مارس 2023
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3
+            class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold mb-2"
+          >
+            وصف الحالة
+          </h3>
+          <p
+            class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed"
+          >
+            عانت قرية الأمل لفترة طويلة من نقص حاد في مصادر المياه النظيفة، مما
+            أدى إلى انتشار الأمراض وزيادة العبء على السكان. بفضل تبرعاتكم
+            السخية، تم حفر بئر ارتوازي وتجهيزه بمضخة تعمل بالطاقة الشمسية، مما
+            يوفر الآن مياه شرب آمنة ومستدامة لجميع أهالي القرية.
+          </p>
+        </div>
+        <button class="w-full h-12 bg-primary rounded-xl text-white font-bold">
+          تصفح حالات أخرى
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

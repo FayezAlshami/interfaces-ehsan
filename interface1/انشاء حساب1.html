@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>إنشاء حساب جديد - Sign Up Form</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#17cf54",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112116",
+            },
+            fontFamily: {
+              display: ["Public Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+              lg: "2rem",
+              xl: "3rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .input-container:focus-within {
+        border-color: #17cf54;
+        box-shadow: 0 0 0 2px rgba(23, 207, 84, 0.2);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden"
+      style="font-family: 'Public Sans', 'Noto Sans', sans-serif"
+    >
+      <div
+        class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between"
+      >
+        <div
+          class="text-[#0e1b12] dark:text-gray-200 flex size-12 shrink-0 items-center justify-center"
+        >
+          <span class="material-symbols-outlined text-3xl">arrow_forward</span>
+        </div>
+        <h2
+          class="text-[#0e1b12] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center"
+        >
+          إنشاء حساب جديد
+        </h2>
+        <div class="flex size-12 shrink-0 items-center"></div>
+      </div>
+      <div class="flex flex-1 flex-col justify-between px-6 pt-4 pb-8">
+        <div class="flex flex-col space-y-5">
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+              for="full-name"
+              >الاسم</label
+            >
+            <div
+              class="input-container flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 transition-all duration-200"
+            >
+              <span
+                class="material-symbols-outlined text-gray-400 dark:text-gray-500"
+                >person</span
+              >
+              <input
+                class="w-full border-0 bg-transparent py-3 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-0"
+                id="full-name"
+                placeholder="أدخل اسمك الكامل"
+                type="text"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+              for="email"
+              >البريد الإلكتروني</label
+            >
+            <div
+              class="input-container flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 transition-all duration-200"
+            >
+              <span
+                class="material-symbols-outlined text-gray-400 dark:text-gray-500"
+                >mail</span
+              >
+              <input
+                class="w-full border-0 bg-transparent py-3 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-0"
+                id="email"
+                placeholder=""
+                type="email"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+              for="phone"
+              >رقم الهاتف</label
+            >
+            <div
+              class="input-container flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 transition-all duration-200"
+            >
+              <span
+                class="material-symbols-outlined text-gray-400 dark:text-gray-500"
+                >phone</span
+              >
+              <div class="flex items-center">
+                <span class="text-gray-900 dark:text-white">+963</span>
+                <div class="mx-2 h-5 w-px bg-gray-200 dark:bg-gray-700"></div>
+              </div>
+              <input
+                class="w-full border-0 bg-transparent py-3 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-0"
+                id="phone"
+                placeholder="9xxxxxxxx"
+                type="tel"
+              />
+            </div>
+          </div>
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+              for="gender"
+              >الجنس</label
+            >
+            <div
+              class="grid grid-cols-2 gap-2 rounded-lg bg-gray-100 dark:bg-gray-800 p-1"
+            >
+              <button
+                class="rounded-md bg-white dark:bg-gray-700 py-2.5 text-sm font-semibold text-primary dark:text-white shadow-sm"
+              >
+                ذكر
+              </button>
+              <button
+                class="rounded-md py-2.5 text-sm font-semibold text-gray-600 dark:text-gray-400"
+              >
+                أنثى
+              </button>
+            </div>
+          </div>
+          <div>
+            <label
+              class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300"
+              for="birthdate"
+              >تاريخ الميلاد</label
+            >
+            <div
+              class="input-container relative flex items-center gap-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 transition-all duration-200"
+            >
+              <span
+                class="material-symbols-outlined text-gray-400 dark:text-gray-500"
+                >calendar_today</span
+              >
+              <input
+                class="w-full border-0 bg-transparent py-3 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-0"
+                id="birthdate"
+                onblur="(this.type='text')"
+                onfocus="(this.type='date')"
+                placeholder="اختر تاريخ ميلادك"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="flex items-center space-x-2 space-x-reverse pt-2">
+            <input
+              class="h-5 w-5 rounded border-gray-300 bg-gray-100 text-primary focus:ring-2 focus:ring-primary dark:border-gray-600 dark:bg-gray-700 dark:ring-offset-background-dark dark:focus:ring-primary"
+              id="privacy-policy"
+              name="privacy-policy"
+              type="checkbox"
+            />
+            <label
+              class="text-sm text-gray-600 dark:text-gray-400"
+              for="privacy-policy"
+            >
+              أوافق على
+              <a class="font-semibold text-primary underline" href="#"
+                >سياسة الخصوصية</a
+              >
+            </label>
+          </div>
+        </div>
+        <div class="mt-8">
+          <button
+            class="w-full rounded-full bg-primary py-4 text-base font-bold text-white shadow-lg shadow-primary/30 transition-transform duration-200 ease-in-out hover:scale-[1.02]"
+          >
+            إنشاء حساب
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

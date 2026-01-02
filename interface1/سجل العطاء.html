@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>سجل العطاء - تصميم محسن</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans+Arabic:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13ec5b",
+            "primary-dark": "#0ea340",
+            "accent": "#facc15",
+            "background-light": "#f6f8f6",
+            "background-dark": "#102216",
+            "surface-light": "#ffffff",
+            "surface-dark": "#1a3322",
+            "text-primary-light": "#0d1b12",
+            "text-primary-dark": "#e0e7e3",
+            "text-secondary-light": "#4c9a66",
+            "text-secondary-dark": "#88c99e",
+          },
+          fontFamily: {
+            "display": ["Noto Sans Arabic", "Manrope", "sans-serif"],
+            "body": ["Noto Sans Arabic", "Manrope", "sans-serif"],
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "1rem",
+            "2xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-body antialiased text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex h-full min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-xl">
+<header class="sticky top-0 z-10 flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-gray-100 dark:border-gray-800">
+<button class="text-text-primary-light dark:text-text-primary-dark hover:bg-black/5 dark:hover:bg-white/10 rounded-full p-2 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+</button>
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">سجل العطاء</h2>
+<div class="w-10"></div>
+</header>
+<main class="flex-1 flex flex-col gap-6 p-4">
+<div class="flex flex-col gap-1">
+<h3 class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-xl font-bold leading-tight">إحصائيات العطاء</h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">ملخص تبرعاتك وأثرها</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-3 rounded-2xl p-4 bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 text-primary-dark dark:text-primary">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-xs font-medium">هذا العام</p>
+</div>
+<p class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-xl font-bold leading-tight">1,250,000</p>
+<p class="text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark -mt-2">ل.س</p>
+</div>
+<div class="flex flex-col gap-3 rounded-2xl p-4 bg-surface-light dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2">
+<div class="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/10 text-yellow-600 dark:text-yellow-400">
+<span class="material-symbols-outlined text-[18px]">date_range</span>
+</div>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-xs font-medium">هذا الشهر</p>
+</div>
+<p class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-xl font-bold leading-tight">150,000</p>
+<p class="text-sm font-normal text-text-secondary-light dark:text-text-secondary-dark -mt-2">ل.س</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<div class="flex flex-col gap-2 rounded-2xl border border-gray-100 dark:border-gray-700 bg-surface-light dark:bg-surface-dark p-3 items-center text-center shadow-sm">
+<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400">
+<span class="material-symbols-outlined text-[24px]">assignment_turned_in</span>
+</div>
+<p class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-2xl font-bold leading-tight">24</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-[11px] font-medium leading-tight">مشاريع ممولة</p>
+</div>
+<div class="flex flex-col gap-2 rounded-2xl border border-gray-100 dark:border-gray-700 bg-surface-light dark:bg-surface-dark p-3 items-center text-center shadow-sm">
+<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+<p class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-2xl font-bold leading-tight">1,205</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-[11px] font-medium leading-tight">مستفيد</p>
+</div>
+<div class="flex flex-col gap-2 rounded-2xl border border-gray-100 dark:border-gray-700 bg-surface-light dark:bg-surface-dark p-3 items-center text-center shadow-sm">
+<div class="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400">
+<span class="material-symbols-outlined text-[24px]">pending_actions</span>
+</div>
+<p class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-2xl font-bold leading-tight">5</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-[11px] font-medium leading-tight">قيد التنفيذ</p>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<h2 class="text-text-primary-light dark:text-text-primary-dark tracking-tight text-[22px] font-bold leading-tight">أثر تبرعاتك</h2>
+<button class="text-primary-dark dark:text-primary text-sm font-bold flex items-center gap-1">
+          عرض الكل
+          <span class="material-symbols-outlined text-[18px]">arrow_back</span>
+</button>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-4 rounded-2xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-colors">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#e0f2f1] dark:bg-[#1a3835] text-[#009688]">
+<span class="material-symbols-outlined text-[28px] leading-none">school</span>
+</div>
+<div class="flex-1">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-bold">طالب متعلم</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">كفالة تعليمية</p>
+</div>
+<div class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">45</div>
+</div>
+<div class="flex items-center gap-4 rounded-2xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-colors">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#e3f2fd] dark:bg-[#152e42] text-[#2196f3]">
+<span class="material-symbols-outlined text-[28px] leading-none">water_drop</span>
+</div>
+<div class="flex-1">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-bold">آبار محفورة</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">سقيا الماء</p>
+</div>
+<div class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">3</div>
+</div>
+<div class="flex items-center gap-4 rounded-2xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-colors">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#fce4ec] dark:bg-[#3d1e2b] text-[#e91e63]">
+<span class="material-symbols-outlined text-[28px] leading-none">local_hospital</span>
+</div>
+<div class="flex-1">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-bold">عملية جراحية</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">دعم العمليات العاجلة</p>
+</div>
+<div class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">12</div>
+</div>
+<div class="flex items-center gap-4 rounded-2xl bg-surface-light dark:bg-surface-dark p-4 shadow-sm border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-colors">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#fff8e1] dark:bg-[#3e3418] text-[#ffc107]">
+<span class="material-symbols-outlined text-[28px] leading-none">restaurant</span>
+</div>
+<div class="flex-1">
+<p class="text-text-primary-light dark:text-text-primary-dark text-base font-bold">سلة غذائية</p>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">إطعام مسكين</p>
+</div>
+<div class="text-lg font-bold text-text-primary-light dark:text-text-primary-dark">150</div>
+</div>
+</div>
+<div class="mt-4 mb-8">
+<button class="w-full flex items-center justify-center gap-2 rounded-xl bg-primary hover:bg-primary-dark text-white font-bold text-lg h-14 transition-all shadow-lg shadow-green-500/30">
+<span class="material-symbols-outlined">volunteer_activism</span>
+          تبرع الآن
+        </button>
+</div>
+</main>
+<nav class="sticky bottom-0 z-20 bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pb-safe">
+<div class="flex justify-around items-center h-16 px-2">
+<button class="flex flex-col items-center gap-1 p-2 text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors w-16">
+
+</div>
+</nav>
+</div>
+
+</body></html>

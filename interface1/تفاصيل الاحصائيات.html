@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>إحصائيات السنة الحالية</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13ec5b",
+              "primary-dark": "#0ea640",
+              "background-light": "#f8fcf9",
+              "background-dark": "#102216",
+              "card-light": "#ffffff",
+              "card-dark": "#1a3322",
+            },
+            fontFamily: {
+              display: ["Manrope", "Noto Sans Arabic", "sans-serif"],
+              body: ["Noto Sans Arabic", "Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              "2xl": "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans+Arabic:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Noto Sans Arabic", "Manrope", sans-serif;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #334155;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-200 min-h-screen relative flex flex-col overflow-x-hidden group/design-root"
+  >
+    <header
+      class="sticky top-0 z-50 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md p-4 pb-2 justify-between border-b border-gray-100 dark:border-white/5"
+    >
+      <button
+        aria-label="Back"
+        class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
+      >
+        <span class="material-symbols-outlined text-[24px]">arrow_forward</span>
+      </button>
+      <h2
+        class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10 font-display"
+      >
+        إحصائيات السنة الحالية
+      </h2>
+    </header>
+    <main
+      class="flex-1 flex flex-col gap-6 p-4 pb-12 w-full max-w-md mx-auto md:max-w-3xl"
+    >
+      <section class="w-full">
+        <div
+          class="relative flex flex-col gap-3 rounded-2xl p-6 bg-[#e7f3eb] dark:bg-primary/10 overflow-hidden border border-[#cfe7d7] dark:border-primary/20"
+        >
+          <div
+            class="absolute -right-6 -top-6 size-32 bg-primary/20 rounded-full blur-2xl"
+          ></div>
+          <div class="relative z-10 flex items-center gap-2 mb-1">
+            <div
+              class="flex items-center justify-center size-8 rounded-full bg-white/60 dark:bg-white/10 text-emerald-700 dark:text-primary"
+            >
+              <span class="material-symbols-outlined text-[18px]"
+                >account_balance_wallet</span
+              >
+            </div>
+            <p
+              class="text-emerald-900 dark:text-emerald-100 text-base font-medium leading-normal"
+            >
+              إجمالي تبرعات السنة
+            </p>
+          </div>
+          <div class="relative z-10">
+            <p
+              class="text-emerald-950 dark:text-white tracking-tight text-4xl font-extrabold leading-tight"
+            >
+              250,000,000
+              <span
+                class="text-xl font-bold text-emerald-700 dark:text-emerald-400"
+                >ر.س</span
+              >
+            </p>
+          </div>
+          <div
+            class="relative z-10 flex items-center gap-1 mt-1 text-sm font-bold text-emerald-700 dark:text-primary"
+          >
+            <span class="material-symbols-outlined text-[18px]"
+              >trending_up</span
+            >
+            <span>12%</span>
+            <span
+              class="text-emerald-600/70 dark:text-emerald-200/50 font-medium mr-1"
+              >نمو عن العام الماضي</span
+            >
+          </div>
+        </div>
+      </section>
+      <section class="grid grid-cols-2 gap-3 w-full">
+        <div
+          class="flex flex-col gap-3 rounded-2xl p-5 bg-white dark:bg-card-dark shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-white/5"
+        >
+          <div
+            class="size-10 rounded-full bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center text-blue-600 dark:text-blue-400"
+          >
+            <span class="material-symbols-outlined">groups</span>
+          </div>
+          <div>
+            <p
+              class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1"
+            >
+              المستفيدين
+            </p>
+            <p
+              class="text-slate-900 dark:text-white text-2xl font-bold font-display tracking-tight"
+            >
+              1.2M
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-3 rounded-2xl p-5 bg-white dark:bg-card-dark shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-white/5"
+        >
+          <div
+            class="size-10 rounded-full bg-amber-50 dark:bg-amber-500/10 flex items-center justify-center text-amber-600 dark:text-amber-400"
+          >
+            <span class="material-symbols-outlined">receipt_long</span>
+          </div>
+          <div>
+            <p
+              class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1"
+            >
+              عمليات التبرع
+            </p>
+            <p
+              class="text-slate-900 dark:text-white text-2xl font-bold font-display tracking-tight"
+            >
+              540K
+            </p>
+          </div>
+        </div>
+        <div
+          class="col-span-2 flex flex-row items-center justify-between gap-3 rounded-2xl p-5 bg-white dark:bg-card-dark shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-white/5"
+        >
+          <div class="flex flex-col">
+            <p
+              class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1"
+            >
+              تبرعات وقف إحسان
+            </p>
+            <p
+              class="text-slate-900 dark:text-white text-2xl font-bold font-display tracking-tight"
+            >
+              15M <span class="text-sm font-normal text-slate-400">ر.س</span>
+            </p>
+          </div>
+          <div
+            class="size-12 rounded-full bg-purple-50 dark:bg-purple-500/10 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0"
+          >
+            <span class="material-symbols-outlined text-[28px]"
+              >volunteer_activism</span
+            >
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-3 rounded-2xl p-5 bg-white dark:bg-card-dark shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-white/5"
+        >
+          <div
+            class="size-10 rounded-full bg-emerald-50 dark:bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400"
+          >
+            <span class="material-symbols-outlined">handshake</span>
+          </div>
+          <div>
+            <p
+              class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1"
+            >
+              الجمعيات الشريكة
+            </p>
+            <p
+              class="text-slate-900 dark:text-white text-2xl font-bold font-display tracking-tight"
+            >
+              450
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-3 rounded-2xl p-5 bg-white dark:bg-card-dark shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-white/5"
+        >
+          <div
+            class="size-10 rounded-full bg-rose-50 dark:bg-rose-500/10 flex items-center justify-center text-rose-600 dark:text-rose-400"
+          >
+            <span class="material-symbols-outlined">check_circle</span>
+          </div>
+          <div>
+            <p
+              class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1"
+            >
+              فرص مكتملة
+            </p>
+            <p
+              class="text-slate-900 dark:text-white text-2xl font-bold font-display tracking-tight"
+            >
+              120
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="flex items-center justify-between px-1 mb-3">
+          <h2
+            class="text-slate-900 dark:text-white text-xl font-bold leading-tight"
+          >
+            إحصائيات المجالات
+          </h2>
+          <span
+            class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-white/10 px-2 py-1 rounded-lg"
+            >2024</span
+          >
+        </div>
+        <div
+          class="flex flex-col gap-6 rounded-2xl p-6 bg-white dark:bg-card-dark shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-white/5"
+        >
+          <div class="flex flex-col gap-5">
+            <div class="grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+              <p
+                class="text-slate-700 dark:text-slate-200 text-sm font-bold w-12"
+              >
+                زكاة
+              </p>
+              <div
+                class="h-3 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden w-full"
+              >
+                <div
+                  class="h-full bg-emerald-500 rounded-full relative group cursor-help"
+                  style="width: 70%"
+                >
+                  <div
+                    class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"
+                  ></div>
+                </div>
+              </div>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-xs font-bold font-display w-8 text-left"
+              >
+                70%
+              </p>
+            </div>
+            <div class="grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+              <p
+                class="text-slate-700 dark:text-slate-200 text-sm font-bold w-12"
+              >
+                صدقة
+              </p>
+              <div
+                class="h-3 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden w-full"
+              >
+                <div
+                  class="h-full bg-blue-500 rounded-full"
+                  style="width: 55%"
+                ></div>
+              </div>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-xs font-bold font-display w-8 text-left"
+              >
+                55%
+              </p>
+            </div>
+            <div class="grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+              <p
+                class="text-slate-700 dark:text-slate-200 text-sm font-bold w-12"
+              >
+                إغاثة
+              </p>
+              <div
+                class="h-3 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden w-full"
+              >
+                <div
+                  class="h-full bg-amber-500 rounded-full"
+                  style="width: 40%"
+                ></div>
+              </div>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-xs font-bold font-display w-8 text-left"
+              >
+                40%
+              </p>
+            </div>
+            <div class="grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+              <p
+                class="text-slate-700 dark:text-slate-200 text-sm font-bold w-12"
+              >
+                أيتام
+              </p>
+              <div
+                class="h-3 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden w-full"
+              >
+                <div
+                  class="h-full bg-purple-500 rounded-full"
+                  style="width: 30%"
+                ></div>
+              </div>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-xs font-bold font-display w-8 text-left"
+              >
+                30%
+              </p>
+            </div>
+            <div class="grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+              <p
+                class="text-slate-700 dark:text-slate-200 text-sm font-bold w-12"
+              >
+                مساجد
+              </p>
+              <div
+                class="h-3 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden w-full"
+              >
+                <div
+                  class="h-full bg-rose-500 rounded-full"
+                  style="width: 25%"
+                ></div>
+              </div>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-xs font-bold font-display w-8 text-left"
+              >
+                25%
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2
+          class="text-slate-900 dark:text-white text-xl font-bold px-1 mb-3 leading-tight"
+        >
+          إحصائيات الجمعيات حسب المناطق
+        </h2>
+        <div
+          class="bg-white dark:bg-card-dark rounded-2xl p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-slate-100 dark:border-white/5 flex flex-col gap-4"
+        >
+          <div class="flex flex-col gap-2">
+            <label
+              class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider"
+              >اختر المنطقة</label
+            >
+            <div class="relative group">
+              <select
+                class="w-full appearance-none bg-slate-50 dark:bg-black/20 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white rounded-xl py-3.5 px-4 pr-10 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all font-medium cursor-pointer"
+              >
+                <option value="damascus">دمشق</option>
+                <option value="aleppo">حلب</option>
+                <option value="homs">حمص</option>
+                <option value="latakia">اللاذقية</option>
+                <option value="hama">حماة</option>
+                <option value="daraa">درعا</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 left-0 flex items-center px-4 text-slate-500 group-hover:text-primary transition-colors"
+              >
+                <span class="material-symbols-outlined">expand_more</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex items-center justify-between p-4 bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/10 dark:border-primary/20"
+          >
+            <div class="flex items-center gap-3">
+              <div
+                class="size-10 rounded-full bg-white dark:bg-white/5 flex items-center justify-center text-primary shadow-sm border border-slate-100 dark:border-white/5"
+              >
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs text-slate-500 dark:text-slate-400"
+                  >الجمعيات في</span
+                >
+                <span class="text-sm font-bold text-slate-900 dark:text-white"
+                  >محافظة دمشق</span
+                >
+              </div>
+            </div>
+            <div class="flex flex-col items-end">
+              <span
+                class="text-2xl font-bold text-primary-dark dark:text-primary font-display"
+                >85</span
+              >
+              <span
+                class="text-[10px] text-slate-400 dark:text-slate-500 font-medium"
+                >جمعية نشطة</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="h-6"></div>
+  </body>
+</html>

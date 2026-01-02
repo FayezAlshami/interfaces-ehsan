@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#567c8d", // Teal color from the screenshots
+              "background-light": "#F3F4F6", // Light gray for light mode
+              "background-dark": "#111827", // Very dark blue/black for dark mode
+              "card-light": "#FFFFFF",
+              "card-dark": "#1F2937",
+              "text-secondary-light": "#6B7280",
+              "text-secondary-dark": "#9CA3AF",
+            },
+            fontFamily: {
+              display: ["Tajawal", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased min-h-screen flex flex-col items-center justify-center selection:bg-primary selection:text-white"
+    dir="rtl"
+  >
+    <div
+      class="w-full max-w-md bg-white dark:bg-gray-900 min-h-screen relative shadow-2xl overflow-hidden flex flex-col"
+    >
+      <div
+        class="h-8 bg-white dark:bg-gray-900 w-full flex items-center justify-between px-4 text-xs font-medium text-gray-800 dark:text-gray-200"
+      >
+        <span>8:22</span>
+        <div class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-sm"
+            >signal_wifi_4_bar</span
+          >
+          <span class="material-symbols-outlined text-sm">battery_full</span>
+        </div>
+      </div>
+      <header
+        class="flex items-center justify-between px-4 py-4 bg-white dark:bg-gray-900 sticky top-0 z-10 border-b border-gray-100 dark:border-gray-800"
+      >
+        <button
+          class="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-400"
+        >
+          <span class="material-symbols-outlined text-2xl"
+            >arrow_forward_ios</span
+          >
+        </button>
+        <h1 class="text-lg font-bold text-gray-800 dark:text-white">
+          شركاء إحسان
+        </h1>
+        <button
+          class="p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-400"
+        >
+          <span class="w-6 h-6"></span>
+        </button>
+      </header>
+      <main class="flex-1 overflow-y-auto p-5 pb-20">
+        <div class="mb-8 text-center">
+          <h2 class="text-2xl font-bold text-primary mb-4">شركاء الإحسان</h2>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+            للخير أوجه متنوعة، وللإحسان أبواب كثيرة؛ لذلك تقدم العديد من الجهات
+            مبادرات وخدمات لمنصة إحسان تساهم في تيسير العطاء، وتوفير فرص الخير
+            المختلفة؛ بما يعظم الأثر داخل المجتمع، ويحقق التنمية على مختلف
+            الأصعدة، فشكر الله عطاءها الكريم.
+          </p>
+        </div>
+        <div class="grid grid-cols-4 gap-4 gap-y-6">
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >volunteer_activism</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >جمعية البر</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >mosque</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >خدمة المساجد</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >school</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >دعم التعليم</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >medical_services</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >الشفاء الصحي</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >water_drop</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >سقيا الماء</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >diversity_1</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >رعاية الأيتام</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >home_work</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >إسكان</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >pets</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >الأضاحي</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >menu_book</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >طباعة المصحف</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >elderly</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >كبار السن</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >accessible</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >ذوي الهمم</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >family_restroom</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >الأسر المتعففة</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >local_shipping</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >الإغاثة</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >recycling</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >حفظ النعمة</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >currency_exchange</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >زكاة المال</span
+            >
+          </div>
+          <div class="flex flex-col items-center justify-center group">
+            <div
+              class="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md border border-gray-100 dark:border-gray-700 p-3 overflow-hidden transition-transform duration-200 group-hover:scale-105"
+            >
+              <span class="material-symbols-outlined text-3xl text-primary"
+                >more_horiz</span
+              >
+            </div>
+            <span
+              class="text-[10px] mt-2 font-medium text-gray-600 dark:text-gray-400 text-center"
+              >المزيد</span
+            >
+          </div>
+        </div>
+      </main>
+      <nav
+        class="h-20 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 flex items-center justify-around px-4 absolute bottom-0 w-full"
+      ></nav>
+      <div
+        class="w-full bg-white dark:bg-gray-900 flex justify-center pb-2 pt-1 absolute bottom-0 z-20 pointer-events-none"
+      >
+        <div class="w-32 h-1 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+      </div>
+    </div>
+  </body>
+</html>

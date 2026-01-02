@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تأكيد تبرع المحسن الصغير</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2F4157",
+              "background-light": "#F4EFEB",
+              "background-dark": "#2F4157",
+              "text-light": "#2F4157",
+              "text-dark": "#FFFFFF",
+              "card-light": "#FFFFFF",
+              "card-dark": "#577C8E",
+              "text-muted-light": "#577C8E",
+              "text-muted-dark": "#C7D9E5",
+              "border-light": "#C7D9E5",
+              "border-dark": "#577C8E",
+            },
+            fontFamily: { display: ["Manrope", "sans-serif"] },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              xl: "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <header
+        class="flex items-center p-4 pb-2 justify-between sticky top-0 bg-background-light dark:bg-background-dark border-b border-border-light dark:border-border-dark"
+      >
+        <div class="flex-1"></div>
+        <h2
+          class="flex-1 text-center text-xl font-bold text-text-light dark:text-text-dark"
+        >
+          تأكيد التبرع
+        </h2>
+        <div
+          class="flex size-10 items-center justify-center text-text-light dark:text-text-dark"
+        >
+          <span class="material-symbols-outlined text-3xl">arrow_forward</span>
+        </div>
+      </header>
+
+      <div class="flex justify-center items-center py-8">
+        <div
+          class="flex items-center justify-center bg-primary/20 rounded-full h-32 w-32"
+        >
+          <span class="material-symbols-outlined text-7xl text-primary"
+            >volunteer_activism</span
+          >
+        </div>
+      </div>
+
+      <p
+        class="text-text-light dark:text-text-dark text-base text-center px-6 pb-6"
+      >
+        سيتم التبرع بالمبلغ التالي من حساب المحسن الصغير:
+      </p>
+
+      <div class="flex flex-col gap-4 px-4">
+        <div
+          class="rounded-xl bg-card-light dark:bg-card-dark p-4 border border-border-light dark:border-border-dark"
+        >
+          <p class="text-sm font-bold text-text-light dark:text-text-dark">
+            للتبرع إلى:
+          </p>
+          <p class="text-primary text-lg font-bold pt-1">إطعام أسرة محتاجة</p>
+        </div>
+
+        <div
+          class="rounded-xl bg-card-light dark:bg-card-dark p-4 border border-border-light dark:border-border-dark"
+        >
+          <p class="text-sm font-bold text-text-light dark:text-text-dark">
+            المبلغ:
+          </p>
+          <p class="text-primary text-lg font-bold pt-1">5,000 ل.س</p>
+        </div>
+      </div>
+
+      <div class="flex-grow"></div>
+
+      <div
+        class="p-4 sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark"
+      >
+        <button
+          class="w-full h-14 rounded-xl bg-primary text-white text-lg font-bold"
+        >
+          تأكيد التبرع
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
