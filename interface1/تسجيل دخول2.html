@@ -62,6 +62,21 @@
         min-height: max(884px, 100dvh);
       }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // قراءة الرقم من localStorage
+        const phoneNumber = localStorage.getItem("phoneNumber");
+        const phoneDisplay = document.getElementById("phone-display");
+
+        if (phoneNumber) {
+          // عرض الرقم مع رمز الدولة
+          phoneDisplay.textContent = "+963 " + phoneNumber;
+        } else {
+          // إذا لم يكن هناك رقم، إخفاء العنصر أو عرض رسالة افتراضية
+          phoneDisplay.textContent = "+963";
+        }
+      });
+    </script>
   </head>
   <body class="font-display">
     <div
@@ -69,9 +84,14 @@
     >
       <div class="flex items-center p-4">
         <div class="flex size-10 items-center justify-center">
-          <span class="material-symbols-outlined text-3xl"
-            >arrow_back_ios_new</span
+          <button
+            onclick="window.location.href='تسجيل دخول1.html'; return false;"
+            class="flex items-center justify-center hover:opacity-70 transition-opacity cursor-pointer"
           >
+            <span class="material-symbols-outlined text-3xl"
+              >arrow_back_ios_new</span
+            >
+          </button>
         </div>
         <h1 class="flex-1 text-center text-lg font-bold">إدخال رمز التحقق</h1>
         <div class="size-10"></div>
@@ -81,6 +101,12 @@
           class="text-base text-center leading-normal text-gray-600 dark:text-gray-400"
         >
           أدخل الرمز المكون من 6 أرقام الذي تم إرساله إلى رقمك
+        </p>
+        <p
+          id="phone-display"
+          class="text-base text-center font-bold text-[#1D1D1F] dark:text-gray-200 mt-2"
+        >
+          +963
         </p>
         <div class="flex justify-center py-10">
           <fieldset class="relative flex gap-2 sm:gap-4" dir="ltr">

@@ -58,6 +58,40 @@
         min-height: max(884px, 100dvh);
       }
     </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const phoneInput = document.getElementById('phone-number');
+        const submitButton = document.getElementById('submit-btn');
+        
+        // تعطيل الزر في البداية
+        submitButton.disabled = true;
+        submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+        
+        // التحقق من الرقم عند الكتابة
+        phoneInput.addEventListener('input', function() {
+          const phoneValue = this.value.trim();
+          if (phoneValue.length >= 9) {
+            submitButton.disabled = false;
+            submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
+          } else {
+            submitButton.disabled = true;
+            submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+          }
+        });
+        
+        // عند الضغط على الزر
+        submitButton.addEventListener('click', function(e) {
+          e.preventDefault();
+          const phoneValue = phoneInput.value.trim();
+          if (phoneValue.length >= 9) {
+            // حفظ الرقم في localStorage
+            localStorage.setItem('phoneNumber', phoneValue);
+            // الانتقال للصفحة التالية
+            window.location.href = 'تسجيل دخول2.html';
+          }
+        });
+      });
+    </script>
   </head>
   <body class="bg-background-light dark:bg-background-dark font-display">
     <div
@@ -67,7 +101,8 @@
         class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between"
       >
         <button
-          class="text-primary-text-light dark:text-primary-text-dark flex size-12 shrink-0 items-center justify-center"
+          onclick="history.back(); return false;"
+          class="text-primary-text-light dark:text-primary-text-dark flex size-12 shrink-0 items-center justify-center hover:opacity-70 transition-opacity cursor-pointer"
         >
           <span class="material-symbols-outlined text-2xl"
             >arrow_forward_ios</span
@@ -125,7 +160,8 @@
         <div class="flex-grow"></div>
         <div class="w-full pt-8 pb-4">
           <button
-            class="flex w-full items-center justify-center rounded-full bg-primary h-14 px-6 text-lg font-bold text-white shadow-sm transition-colors hover:bg-primary/90"
+            id="submit-btn"
+            class="flex w-full items-center justify-center rounded-full bg-primary h-14 px-6 text-lg font-bold text-white shadow-sm transition-colors hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             إرسال رمز التحقق
           </button>
