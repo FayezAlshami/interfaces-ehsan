@@ -61,6 +61,59 @@
         min-height: max(884px, 100dvh);
       }
     </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const continueButton = document.querySelector('button:last-of-type');
+        const amountPresets = document.querySelectorAll('input[name="donation_amount_preset"]');
+        const customAmountInput = document.querySelector('input[placeholder="أو أدخل مبلغ آخر"]');
+        const categoryRadios = document.querySelectorAll('input[name="donation_category"]');
+        
+        // عند الضغط على زر متابعة
+        if (continueButton) {
+          continueButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // الحصول على المبلغ المحدد
+            let selectedAmount = '';
+            let selectedPreset = document.querySelector('input[name="donation_amount_preset"]:checked');
+            
+            if (selectedPreset) {
+              selectedAmount = selectedPreset.value;
+            } else if (customAmountInput && customAmountInput.value.trim()) {
+              selectedAmount = customAmountInput.value.trim();
+            } else {
+              // إذا لم يتم اختيار مبلغ، استخدم القيمة الافتراضية
+              selectedAmount = '100';
+            }
+            
+            // الحصول على الفئة المحددة
+            let selectedCategory = '';
+            let selectedCategoryRadio = document.querySelector('input[name="donation_category"]:checked');
+            if (selectedCategoryRadio) {
+              const categoryLabel = selectedCategoryRadio.closest('label');
+              if (categoryLabel) {
+                const categoryText = categoryLabel.querySelector('p');
+                if (categoryText) {
+                  selectedCategory = categoryText.textContent.trim();
+                }
+              }
+            }
+            
+            // حفظ البيانات في localStorage
+            const donationData = {
+              amount: selectedAmount,
+              category: selectedCategory,
+              customAmount: customAmountInput ? customAmountInput.value.trim() : ''
+            };
+            
+            localStorage.setItem('quickDonationData', JSON.stringify(donationData));
+            
+            // الانتقال للصفحة التالية
+            window.location.href = 'تبرع سريع2.html';
+          });
+        }
+      });
+    </script>
   </head>
   <body class="bg-gray-800/50 font-display">
     <div class="relative flex h-screen w-full flex-col justify-end">
@@ -243,6 +296,8 @@
           class="sticky bottom-0 z-10 bg-background-light dark:bg-background-dark p-4"
         >
           <button
+            id="continue-btn"
+            type="button"
             class="flex h-14 w-full items-center justify-center rounded-xl bg-primary px-4 text-base font-bold text-white shadow-lg transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98]"
           >
             متابعة

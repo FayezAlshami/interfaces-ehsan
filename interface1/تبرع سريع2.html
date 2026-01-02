@@ -54,6 +54,112 @@
         min-height: max(884px, 100dvh);
       }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // قراءة البيانات من localStorage
+        const donationData = localStorage.getItem("quickDonationData");
+        const donationSummary = document.getElementById("donation-summary");
+
+        if (donationData) {
+          try {
+            const data = JSON.parse(donationData);
+            let amount = data.amount || "100";
+            let category = data.category || "تبرع عام";
+
+            // إذا كان هناك مبلغ مخصص، استخدمه
+            if (data.customAmount && data.customAmount.trim()) {
+              amount = data.customAmount.trim();
+            }
+
+            // تحديث النص
+            if (donationSummary) {
+              donationSummary.textContent = `${amount} ل.س - ${category}`;
+            }
+          } catch (e) {
+            console.error("Error parsing donation data:", e);
+          }
+        }
+
+        // إضافة وظيفة لاختيار طريقة الدفع
+        const paymentMethods = document.querySelectorAll(
+          "main > div:last-child > div"
+        );
+        paymentMethods.forEach((method) => {
+          method.style.cursor = "pointer";
+          method.addEventListener("click", function () {
+            // إزالة التحديد من جميع الطرق
+            paymentMethods.forEach((m) => {
+              const radio = m.querySelector(".size-6");
+              const dot = radio ? radio.querySelector(".size-3") : null;
+              if (radio) {
+                radio.classList.remove("border-primary");
+                radio.classList.add("border-gray-300", "dark:border-gray-600");
+              }
+              if (dot) {
+                dot.classList.remove("bg-primary");
+                dot.style.display = "none";
+              }
+            });
+
+            // تحديد الطريقة المختارة
+            const radio = this.querySelector(".size-6");
+            const dot = radio ? radio.querySelector(".size-3") : null;
+            if (radio) {
+              radio.classList.remove("border-gray-300", "dark:border-gray-600");
+              radio.classList.add("border-primary");
+            }
+            if (dot) {
+              dot.classList.add("bg-primary");
+              dot.style.display = "block";
+            } else if (radio) {
+              // إنشاء نقطة إذا لم تكن موجودة
+              const newDot = document.createElement("div");
+              newDot.className = "size-3 bg-primary rounded-full";
+              radio.appendChild(newDot);
+            }
+          });
+        });
+
+        // تحديد الطريقة الأولى افتراضياً
+        if (paymentMethods[0]) {
+          const firstRadio = paymentMethods[0].querySelector(".size-6");
+          if (firstRadio) {
+            firstRadio.classList.remove(
+              "border-gray-300",
+              "dark:border-gray-600"
+            );
+            firstRadio.classList.add("border-primary");
+            const firstDot = firstRadio.querySelector(".size-3");
+            if (firstDot) {
+              firstDot.classList.add("bg-primary");
+              firstDot.style.display = "block";
+            }
+          }
+        }
+
+        // زر التبرع الآن
+        const donateButton = document.getElementById("donate-btn");
+        if (donateButton) {
+          donateButton.addEventListener("click", function () {
+            // التحقق من اختيار طريقة دفع
+            const selectedMethod = document.querySelector(
+              ".size-6.border-primary"
+            );
+            if (!selectedMethod) {
+              alert("الرجاء اختيار طريقة الدفع");
+              return;
+            }
+
+            // يمكن إضافة منطق الدفع هنا
+            // للآن سنعرض رسالة نجاح
+            alert("شكراً لك! سيتم توجيهك إلى صفحة الدفع...");
+
+            // يمكن تغيير الرابط هنا لصفحة الدفع الفعلية
+            // window.location.href = 'صفحة الدفع.html';
+          });
+        }
+      });
+    </script>
   </head>
   <body class="font-display">
     <div
@@ -62,13 +168,14 @@
       <div
         class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10"
       >
-        <div
-          class="text-[#0e1b12] dark:text-white flex size-12 shrink-0 items-center"
+        <button
+          onclick="window.location.href='تبرع سريع.html'; return false;"
+          class="text-[#0e1b12] dark:text-white flex size-12 shrink-0 items-center hover:opacity-70 transition-opacity cursor-pointer"
         >
           <span class="material-symbols-outlined text-2xl"
             >arrow_back_ios_new</span
           >
-        </div>
+        </button>
         <h2
           class="text-[#0e1b12] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pl-12"
         >
@@ -97,9 +204,10 @@
               أنت تتبرع بمبلغ:
             </p>
             <p
+              id="donation-summary"
               class="text-[#0e1b12] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]"
             >
-              10$ لآبار المياه
+              100 ل.س - تبرع عام
             </p>
           </div>
         </div>
@@ -183,7 +291,9 @@
       </main>
       <footer class="p-4 pt-2 mt-auto">
         <button
-          class="bg-primary text-white w-full h-14 rounded-full flex items-center justify-center text-lg font-bold shadow-lg hover:bg-primary/90 transition-colors mb-6"
+          id="donate-btn"
+          type="button"
+          class="bg-primary text-white w-full h-14 rounded-full flex items-center justify-center text-lg font-bold shadow-lg hover:bg-primary/90 transition-colors mb-6 active:scale-95"
         >
           تبرع الآن
         </button>
