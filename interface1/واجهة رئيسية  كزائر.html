@@ -53,6 +53,15 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+<style>
+    /* Smooth page transitions for mobile-like experience */
+    html {
+      scroll-behavior: smooth;
+    }
+    a[href*=".html"] {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display">
 <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden text-text-primary-light dark:text-text-primary-dark">
@@ -224,7 +233,7 @@
 <span class="material-symbols-outlined">lightbulb</span>
 <span class="text-xs">الفرص</span>
 </a>
-<a class="flex flex-col items-center text-text-secondary-light dark:text-text-secondary-dark" href="#">
+<a class="flex flex-col items-center text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-all duration-200 active:scale-95" href="خدمات.html">
 <span class="material-symbols-outlined">widgets</span>
 <span class="text-xs">الخدمات</span>
 </a>
