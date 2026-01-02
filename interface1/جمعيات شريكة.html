@@ -33,10 +33,36 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+<script>
+    function goBack() {
+      // التحقق من referrer للعودة للصفحة المناسبة
+      const referrer = document.referrer.toLowerCase();
+      
+      if (referrer && referrer.length > 0) {
+        // إذا كان referrer يحتوي على اسم الصفحة، ارجع إليها مباشرة
+        if (referrer.includes('واجهة رئيسية  كزائر') || referrer.includes('كزائر')) {
+          window.location.href = 'واجهة رئيسية  كزائر.html';
+          return false;
+        } else if (referrer.includes('الواجهة رئيسية مع تسجيل دخول') || referrer.includes('تسجيل دخول')) {
+          window.location.href = 'الواجهة رئيسية مع تسجيل دخول.html';
+          return false;
+        }
+      }
+      
+      // إذا كان هناك تاريخ، استخدم back (الأفضل لأنه يعيد للصفحة السابقة مباشرة)
+      if (window.history.length > 1) {
+        history.back();
+      } else {
+        // إذا لم يكن هناك تاريخ، ارجع للصفحة الرئيسية للزائر كافتراضي
+        window.location.href = 'واجهة رئيسية  كزائر.html';
+      }
+      return false;
+    }
+  </script>
   </head><body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased min-h-screen">
 <div class="max-w-md mx-auto min-h-screen relative pb-20 bg-background-light dark:bg-background-dark overflow-hidden shadow-xl">
 <header class="flex items-center justify-between px-4 py-4 sticky top-0 z-10 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-border-dark">
-<button class="p-2 -mr-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300">
+<button onclick="goBack();" class="p-2 -mr-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300 active:scale-95 cursor-pointer">
 <span class="material-icons-round text-2xl">arrow_forward_ios</span>
 </button>
 <h1 class="text-lg font-bold text-center flex-grow">الجمعيات الشريكة</h1>
