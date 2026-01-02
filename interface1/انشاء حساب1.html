@@ -55,7 +55,127 @@
       body {
         min-height: max(884px, 100dvh);
       }
+      .gender-btn.active {
+        background-color: #17cf54;
+        color: white;
+      }
+      .gender-btn:not(.active) {
+        background-color: transparent;
+        color: #6b7280;
+      }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const fullNameInput = document.getElementById("full-name");
+        const emailInput = document.getElementById("email");
+        const phoneInput = document.getElementById("phone");
+        const birthdateInput = document.getElementById("birthdate");
+        const privacyCheckbox = document.getElementById("privacy-policy");
+        const submitButton = document.getElementById("submit-btn");
+        const genderButtons = document.querySelectorAll(".gender-btn");
+        let selectedGender = "ذكر"; // القيمة الافتراضية
+
+        // تحسين اختيار الجنس
+        genderButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // إزالة active من جميع الأزرار
+            genderButtons.forEach((btn) => {
+              btn.classList.remove(
+                "active",
+                "bg-white",
+                "dark:bg-gray-700",
+                "text-primary",
+                "dark:text-white",
+                "shadow-sm"
+              );
+              btn.classList.add("text-gray-600", "dark:text-gray-400");
+            });
+
+            // إضافة active للزر المحدد
+            this.classList.add(
+              "active",
+              "bg-primary",
+              "text-white",
+              "shadow-sm"
+            );
+            this.classList.remove("text-gray-600", "dark:text-gray-400");
+
+            selectedGender = this.textContent.trim();
+          });
+        });
+
+        // تعيين الزر الأول (ذكر) كافتراضي
+        if (genderButtons[0]) {
+          genderButtons[0].classList.add(
+            "active",
+            "bg-primary",
+            "text-white",
+            "shadow-sm"
+          );
+          genderButtons[0].classList.remove(
+            "text-gray-600",
+            "dark:text-gray-400"
+          );
+        }
+
+        // التحقق من الحقول عند الكتابة
+        function validateForm() {
+          const nameValid = fullNameInput.value.trim().length >= 2;
+          const emailValid =
+            emailInput.value.trim().includes("@") &&
+            emailInput.value.trim().includes(".");
+          const phoneValid = phoneInput.value.trim().length >= 9;
+          const birthdateValid = birthdateInput.value.trim().length > 0;
+          const privacyValid = privacyCheckbox.checked;
+
+          if (
+            nameValid &&
+            emailValid &&
+            phoneValid &&
+            birthdateValid &&
+            privacyValid
+          ) {
+            submitButton.disabled = false;
+            submitButton.classList.remove("opacity-50", "cursor-not-allowed");
+          } else {
+            submitButton.disabled = true;
+            submitButton.classList.add("opacity-50", "cursor-not-allowed");
+          }
+        }
+
+        // إضافة مستمعي الأحداث
+        fullNameInput.addEventListener("input", validateForm);
+        emailInput.addEventListener("input", validateForm);
+        phoneInput.addEventListener("input", validateForm);
+        birthdateInput.addEventListener("change", validateForm);
+        privacyCheckbox.addEventListener("change", validateForm);
+
+        // تعطيل الزر في البداية
+        submitButton.disabled = true;
+        submitButton.classList.add("opacity-50", "cursor-not-allowed");
+
+        // عند الضغط على زر إنشاء حساب
+        submitButton.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          if (submitButton.disabled) return;
+
+          // حفظ البيانات في localStorage
+          const formData = {
+            fullName: fullNameInput.value.trim(),
+            email: emailInput.value.trim(),
+            phone: phoneInput.value.trim(),
+            gender: selectedGender,
+            birthdate: birthdateInput.value.trim(),
+          };
+
+          localStorage.setItem("signupData", JSON.stringify(formData));
+
+          // الانتقال للصفحة التالية
+          window.location.href = "انشاء حساب2.html";
+        });
+      });
+    </script>
   </head>
   <body class="bg-background-light dark:bg-background-dark font-display">
     <div
@@ -65,11 +185,12 @@
       <div
         class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between"
       >
-        <div
-          class="text-[#0e1b12] dark:text-gray-200 flex size-12 shrink-0 items-center justify-center"
+        <button
+          onclick="history.back(); return false;"
+          class="text-[#0e1b12] dark:text-gray-200 flex size-12 shrink-0 items-center justify-center hover:opacity-70 transition-opacity cursor-pointer"
         >
           <span class="material-symbols-outlined text-3xl">arrow_forward</span>
-        </div>
+        </button>
         <h2
           class="text-[#0e1b12] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center"
         >
@@ -156,12 +277,14 @@
               class="grid grid-cols-2 gap-2 rounded-lg bg-gray-100 dark:bg-gray-800 p-1"
             >
               <button
-                class="rounded-md bg-white dark:bg-gray-700 py-2.5 text-sm font-semibold text-primary dark:text-white shadow-sm"
+                type="button"
+                class="gender-btn rounded-md py-2.5 text-sm font-semibold transition-all duration-200 active:scale-95 cursor-pointer bg-primary text-white shadow-sm"
               >
                 ذكر
               </button>
               <button
-                class="rounded-md py-2.5 text-sm font-semibold text-gray-600 dark:text-gray-400"
+                type="button"
+                class="gender-btn rounded-md py-2.5 text-sm font-semibold transition-all duration-200 active:scale-95 cursor-pointer text-gray-600 dark:text-gray-400"
               >
                 أنثى
               </button>
@@ -210,7 +333,9 @@
         </div>
         <div class="mt-8">
           <button
-            class="w-full rounded-full bg-primary py-4 text-base font-bold text-white shadow-lg shadow-primary/30 transition-transform duration-200 ease-in-out hover:scale-[1.02]"
+            id="submit-btn"
+            type="button"
+            class="w-full rounded-full bg-primary py-4 text-base font-bold text-white shadow-lg shadow-primary/30 transition-transform duration-200 ease-in-out hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
           >
             إنشاء حساب
           </button>
